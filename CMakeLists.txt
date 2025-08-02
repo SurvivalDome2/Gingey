@@ -60,7 +60,7 @@ if (BUILD_ENGINE)
 
     target_compile_options(gingey PRIVATE
       $<$<C_COMPILER_ID:MSVC>:/W4 /WX>
-      $<$<C_COMPILER_ID:GNU,Clang,AppleClang>:-Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit>
+      $<$<C_COMPILER_ID:GNU,Clang,AppleClang>:-Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations>
     )
 endif()
 
