@@ -1,0 +1,15 @@
+# ninja log v7
+9	52	7758253280511254	CMakeFiles/gingey.dir/engine/src/core/memory.c.obj	3d115df94873c7ba
+5	59	7758253280480528	CMakeFiles/gingey.dir/engine/src/core/engine.c.obj	b05be676626979ed
+12	64	7758253280538034	CMakeFiles/gingey.dir/engine/src/core/logger.c.obj	9522f300c60d3451
+15	65	7758253280538034	CMakeFiles/gingey.dir/engine/src/core/event_system.c.obj	fe11e0500f0e02d5
+19	68	7758253280591745	CMakeFiles/gingey.dir/engine/src/platform/platform.c.obj	85633e7c9b66e9fd
+24	71	7758253280650558	CMakeFiles/gingey.dir/engine/src/platform/win32_platform.c.obj	774b2acbbb561110
+2	76	7758253280332871	CMakeFiles/gingey.dir/engine/src/core/main.c.obj	ee1374416a446c3a
+28	77	7758253280694640	CMakeFiles/gingey.dir/engine/src/graphics/vulkan_renderer.c.obj	6cfc575e2de75cd0
+32	86	7758253280737170	CMakeFiles/gingey.dir/engine/src/graphics/vulkan_utils.c.obj	8ba54ef8391ef17d
+36	86	7758253280788879	CMakeFiles/gingey.dir/engine/src/graphics/shader.c.obj	89df957cb52b175e
+42	89	7758253280845583	CMakeFiles/gingey.dir/engine/src/graphics/texture.c.obj	2f27b36d6720d3cc
+47	108	7758253280885732	CMakeFiles/rogue_like_sim.dir/game/src/main.c.obj	420f7e826e2b66a4
+89	184	7758253281296036	D:/Dev/Gingey/bin/engine/gingey.exe	dd3acb05e8aaea18
+108	199	7758253281478990	D:/Dev/Gingey/bin/game/rogue_like_sim.exe	aac66e7b906d2af1

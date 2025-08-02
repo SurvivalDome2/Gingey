@@ -1,0 +1,4 @@
+D:/Dev/Gingey/build/CMakeFiles/gingey.dir
+D:/Dev/Gingey/build/CMakeFiles/rogue_like_sim.dir
+D:/Dev/Gingey/build/CMakeFiles/edit_cache.dir
+D:/Dev/Gingey/build/CMakeFiles/rebuild_cache.dir
