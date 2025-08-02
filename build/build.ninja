@@ -47,13 +47,13 @@ cmake_ninja_workdir = D$:/Dev/Gingey/build/
 #############################################
 # Order-only phony target for gingey
 
-build cmake_object_order_depends_target_gingey: phony || .
+build cmake_object_order_depends_target_gingey: phony || cmake_object_order_depends_target_glfw
 
 build CMakeFiles/gingey.dir/engine/src/core/main.c.obj: C_COMPILER__gingey_unscanned_Debug D$:/Dev/Gingey/engine/src/core/main.c || cmake_object_order_depends_target_gingey
   CONFIG = Debug
   DEP_FILE = CMakeFiles\gingey.dir\engine\src\core\main.c.obj.d
-  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
-  INCLUDES = -ID:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
+  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit
+  INCLUDES = -ID:/Dev/Gingey/engine/include -ID:/Dev/Gingey/libs/GLFW/include -isystem C:/VulkanSDK/1.4.321.1/include
   OBJECT_DIR = CMakeFiles\gingey.dir
   OBJECT_FILE_DIR = CMakeFiles\gingey.dir\engine\src\core
   TARGET_COMPILE_PDB = CMakeFiles\gingey.dir\
@@ -62,8 +62,8 @@ build CMakeFiles/gingey.dir/engine/src/core/main.c.obj: C_COMPILER__gingey_unsca
 build CMakeFiles/gingey.dir/engine/src/core/engine.c.obj: C_COMPILER__gingey_unscanned_Debug D$:/Dev/Gingey/engine/src/core/engine.c || cmake_object_order_depends_target_gingey
   CONFIG = Debug
   DEP_FILE = CMakeFiles\gingey.dir\engine\src\core\engine.c.obj.d
-  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
-  INCLUDES = -ID:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
+  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit
+  INCLUDES = -ID:/Dev/Gingey/engine/include -ID:/Dev/Gingey/libs/GLFW/include -isystem C:/VulkanSDK/1.4.321.1/include
   OBJECT_DIR = CMakeFiles\gingey.dir
   OBJECT_FILE_DIR = CMakeFiles\gingey.dir\engine\src\core
   TARGET_COMPILE_PDB = CMakeFiles\gingey.dir\
@@ -72,8 +72,8 @@ build CMakeFiles/gingey.dir/engine/src/core/engine.c.obj: C_COMPILER__gingey_uns
 build CMakeFiles/gingey.dir/engine/src/core/memory.c.obj: C_COMPILER__gingey_unscanned_Debug D$:/Dev/Gingey/engine/src/core/memory.c || cmake_object_order_depends_target_gingey
   CONFIG = Debug
   DEP_FILE = CMakeFiles\gingey.dir\engine\src\core\memory.c.obj.d
-  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
-  INCLUDES = -ID:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
+  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit
+  INCLUDES = -ID:/Dev/Gingey/engine/include -ID:/Dev/Gingey/libs/GLFW/include -isystem C:/VulkanSDK/1.4.321.1/include
   OBJECT_DIR = CMakeFiles\gingey.dir
   OBJECT_FILE_DIR = CMakeFiles\gingey.dir\engine\src\core
   TARGET_COMPILE_PDB = CMakeFiles\gingey.dir\
@@ -82,8 +82,8 @@ build CMakeFiles/gingey.dir/engine/src/core/memory.c.obj: C_COMPILER__gingey_uns
 build CMakeFiles/gingey.dir/engine/src/core/logger.c.obj: C_COMPILER__gingey_unscanned_Debug D$:/Dev/Gingey/engine/src/core/logger.c || cmake_object_order_depends_target_gingey
   CONFIG = Debug
   DEP_FILE = CMakeFiles\gingey.dir\engine\src\core\logger.c.obj.d
-  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
-  INCLUDES = -ID:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
+  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit
+  INCLUDES = -ID:/Dev/Gingey/engine/include -ID:/Dev/Gingey/libs/GLFW/include -isystem C:/VulkanSDK/1.4.321.1/include
   OBJECT_DIR = CMakeFiles\gingey.dir
   OBJECT_FILE_DIR = CMakeFiles\gingey.dir\engine\src\core
   TARGET_COMPILE_PDB = CMakeFiles\gingey.dir\
@@ -92,8 +92,8 @@ build CMakeFiles/gingey.dir/engine/src/core/logger.c.obj: C_COMPILER__gingey_uns
 build CMakeFiles/gingey.dir/engine/src/core/event_system.c.obj: C_COMPILER__gingey_unscanned_Debug D$:/Dev/Gingey/engine/src/core/event_system.c || cmake_object_order_depends_target_gingey
   CONFIG = Debug
   DEP_FILE = CMakeFiles\gingey.dir\engine\src\core\event_system.c.obj.d
-  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
-  INCLUDES = -ID:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
+  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit
+  INCLUDES = -ID:/Dev/Gingey/engine/include -ID:/Dev/Gingey/libs/GLFW/include -isystem C:/VulkanSDK/1.4.321.1/include
   OBJECT_DIR = CMakeFiles\gingey.dir
   OBJECT_FILE_DIR = CMakeFiles\gingey.dir\engine\src\core
   TARGET_COMPILE_PDB = CMakeFiles\gingey.dir\
@@ -102,8 +102,8 @@ build CMakeFiles/gingey.dir/engine/src/core/event_system.c.obj: C_COMPILER__ging
 build CMakeFiles/gingey.dir/engine/src/platform/platform.c.obj: C_COMPILER__gingey_unscanned_Debug D$:/Dev/Gingey/engine/src/platform/platform.c || cmake_object_order_depends_target_gingey
   CONFIG = Debug
   DEP_FILE = CMakeFiles\gingey.dir\engine\src\platform\platform.c.obj.d
-  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
-  INCLUDES = -ID:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
+  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit
+  INCLUDES = -ID:/Dev/Gingey/engine/include -ID:/Dev/Gingey/libs/GLFW/include -isystem C:/VulkanSDK/1.4.321.1/include
   OBJECT_DIR = CMakeFiles\gingey.dir
   OBJECT_FILE_DIR = CMakeFiles\gingey.dir\engine\src\platform
   TARGET_COMPILE_PDB = CMakeFiles\gingey.dir\
@@ -112,8 +112,8 @@ build CMakeFiles/gingey.dir/engine/src/platform/platform.c.obj: C_COMPILER__ging
 build CMakeFiles/gingey.dir/engine/src/platform/win32_platform.c.obj: C_COMPILER__gingey_unscanned_Debug D$:/Dev/Gingey/engine/src/platform/win32_platform.c || cmake_object_order_depends_target_gingey
   CONFIG = Debug
   DEP_FILE = CMakeFiles\gingey.dir\engine\src\platform\win32_platform.c.obj.d
-  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
-  INCLUDES = -ID:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
+  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit
+  INCLUDES = -ID:/Dev/Gingey/engine/include -ID:/Dev/Gingey/libs/GLFW/include -isystem C:/VulkanSDK/1.4.321.1/include
   OBJECT_DIR = CMakeFiles\gingey.dir
   OBJECT_FILE_DIR = CMakeFiles\gingey.dir\engine\src\platform
   TARGET_COMPILE_PDB = CMakeFiles\gingey.dir\
@@ -122,8 +122,8 @@ build CMakeFiles/gingey.dir/engine/src/platform/win32_platform.c.obj: C_COMPILER
 build CMakeFiles/gingey.dir/engine/src/graphics/vulkan_renderer.c.obj: C_COMPILER__gingey_unscanned_Debug D$:/Dev/Gingey/engine/src/graphics/vulkan_renderer.c || cmake_object_order_depends_target_gingey
   CONFIG = Debug
   DEP_FILE = CMakeFiles\gingey.dir\engine\src\graphics\vulkan_renderer.c.obj.d
-  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
-  INCLUDES = -ID:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
+  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit
+  INCLUDES = -ID:/Dev/Gingey/engine/include -ID:/Dev/Gingey/libs/GLFW/include -isystem C:/VulkanSDK/1.4.321.1/include
   OBJECT_DIR = CMakeFiles\gingey.dir
   OBJECT_FILE_DIR = CMakeFiles\gingey.dir\engine\src\graphics
   TARGET_COMPILE_PDB = CMakeFiles\gingey.dir\
@@ -132,8 +132,8 @@ build CMakeFiles/gingey.dir/engine/src/graphics/vulkan_renderer.c.obj: C_COMPILE
 build CMakeFiles/gingey.dir/engine/src/graphics/vulkan_utils.c.obj: C_COMPILER__gingey_unscanned_Debug D$:/Dev/Gingey/engine/src/graphics/vulkan_utils.c || cmake_object_order_depends_target_gingey
   CONFIG = Debug
   DEP_FILE = CMakeFiles\gingey.dir\engine\src\graphics\vulkan_utils.c.obj.d
-  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
-  INCLUDES = -ID:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
+  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit
+  INCLUDES = -ID:/Dev/Gingey/engine/include -ID:/Dev/Gingey/libs/GLFW/include -isystem C:/VulkanSDK/1.4.321.1/include
   OBJECT_DIR = CMakeFiles\gingey.dir
   OBJECT_FILE_DIR = CMakeFiles\gingey.dir\engine\src\graphics
   TARGET_COMPILE_PDB = CMakeFiles\gingey.dir\
@@ -142,8 +142,8 @@ build CMakeFiles/gingey.dir/engine/src/graphics/vulkan_utils.c.obj: C_COMPILER__
 build CMakeFiles/gingey.dir/engine/src/graphics/shader.c.obj: C_COMPILER__gingey_unscanned_Debug D$:/Dev/Gingey/engine/src/graphics/shader.c || cmake_object_order_depends_target_gingey
   CONFIG = Debug
   DEP_FILE = CMakeFiles\gingey.dir\engine\src\graphics\shader.c.obj.d
-  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
-  INCLUDES = -ID:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
+  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit
+  INCLUDES = -ID:/Dev/Gingey/engine/include -ID:/Dev/Gingey/libs/GLFW/include -isystem C:/VulkanSDK/1.4.321.1/include
   OBJECT_DIR = CMakeFiles\gingey.dir
   OBJECT_FILE_DIR = CMakeFiles\gingey.dir\engine\src\graphics
   TARGET_COMPILE_PDB = CMakeFiles\gingey.dir\
@@ -152,8 +152,8 @@ build CMakeFiles/gingey.dir/engine/src/graphics/shader.c.obj: C_COMPILER__gingey
 build CMakeFiles/gingey.dir/engine/src/graphics/texture.c.obj: C_COMPILER__gingey_unscanned_Debug D$:/Dev/Gingey/engine/src/graphics/texture.c || cmake_object_order_depends_target_gingey
   CONFIG = Debug
   DEP_FILE = CMakeFiles\gingey.dir\engine\src\graphics\texture.c.obj.d
-  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
-  INCLUDES = -ID:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
+  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit
+  INCLUDES = -ID:/Dev/Gingey/engine/include -ID:/Dev/Gingey/libs/GLFW/include -isystem C:/VulkanSDK/1.4.321.1/include
   OBJECT_DIR = CMakeFiles\gingey.dir
   OBJECT_FILE_DIR = CMakeFiles\gingey.dir\engine\src\graphics
   TARGET_COMPILE_PDB = CMakeFiles\gingey.dir\
@@ -167,11 +167,11 @@ build CMakeFiles/gingey.dir/engine/src/graphics/texture.c.obj: C_COMPILER__ginge
 #############################################
 # Link the executable D:\Dev\Gingey\bin\engine\gingey.exe
 
-build D$:/Dev/Gingey/bin/engine/gingey.exe: C_EXECUTABLE_LINKER__gingey_Debug CMakeFiles/gingey.dir/engine/src/core/main.c.obj CMakeFiles/gingey.dir/engine/src/core/engine.c.obj CMakeFiles/gingey.dir/engine/src/core/memory.c.obj CMakeFiles/gingey.dir/engine/src/core/logger.c.obj CMakeFiles/gingey.dir/engine/src/core/event_system.c.obj CMakeFiles/gingey.dir/engine/src/platform/platform.c.obj CMakeFiles/gingey.dir/engine/src/platform/win32_platform.c.obj CMakeFiles/gingey.dir/engine/src/graphics/vulkan_renderer.c.obj CMakeFiles/gingey.dir/engine/src/graphics/vulkan_utils.c.obj CMakeFiles/gingey.dir/engine/src/graphics/shader.c.obj CMakeFiles/gingey.dir/engine/src/graphics/texture.c.obj | C$:/VulkanSDK/1.4.321.1/Lib/vulkan-1.lib
+build D$:/Dev/Gingey/bin/engine/gingey.exe: C_EXECUTABLE_LINKER__gingey_Debug CMakeFiles/gingey.dir/engine/src/core/main.c.obj CMakeFiles/gingey.dir/engine/src/core/engine.c.obj CMakeFiles/gingey.dir/engine/src/core/memory.c.obj CMakeFiles/gingey.dir/engine/src/core/logger.c.obj CMakeFiles/gingey.dir/engine/src/core/event_system.c.obj CMakeFiles/gingey.dir/engine/src/platform/platform.c.obj CMakeFiles/gingey.dir/engine/src/platform/win32_platform.c.obj CMakeFiles/gingey.dir/engine/src/graphics/vulkan_renderer.c.obj CMakeFiles/gingey.dir/engine/src/graphics/vulkan_utils.c.obj CMakeFiles/gingey.dir/engine/src/graphics/shader.c.obj CMakeFiles/gingey.dir/engine/src/graphics/texture.c.obj | C$:/VulkanSDK/1.4.321.1/Lib/vulkan-1.lib libs/GLFW/src/glfw3.lib || libs/GLFW/src/glfw3.lib
   CONFIG = Debug
   FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
   LINK_FLAGS = -Xlinker /subsystem:console -fuse-ld=lld-link
-  LINK_LIBRARIES = C:/VulkanSDK/1.4.321.1/Lib/vulkan-1.lib  -luser32.lib  -lgdi32.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
+  LINK_LIBRARIES = C:/VulkanSDK/1.4.321.1/Lib/vulkan-1.lib  libs/GLFW/src/glfw3.lib  -luser32.lib  -lgdi32.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
   OBJECT_DIR = CMakeFiles\gingey.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -244,6 +244,546 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Dev\Gingey\build && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Dev\Gingey\build && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Dev\Gingey\build && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# D:/Dev/Gingey/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for uninstall
+
+build libs/GLFW/uninstall: phony libs/GLFW/CMakeFiles/uninstall
+
+
+#############################################
+# Utility command for edit_cache
+
+build libs/GLFW/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Dev\Gingey\build\libs\GLFW && "C:\Program Files\CMake\bin\cmake-gui.exe" -SD:\Dev\Gingey -BD:\Dev\Gingey\build"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build libs/GLFW/edit_cache: phony libs/GLFW/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build libs/GLFW/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Dev\Gingey\build\libs\GLFW && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SD:\Dev\Gingey -BD:\Dev\Gingey\build"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build libs/GLFW/rebuild_cache: phony libs/GLFW/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build libs/GLFW/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build libs/GLFW/CMakeFiles/install.util: CUSTOM_COMMAND libs/GLFW/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Dev\Gingey\build\libs\GLFW && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build libs/GLFW/install: phony libs/GLFW/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build libs/GLFW/CMakeFiles/install/local.util: CUSTOM_COMMAND libs/GLFW/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Dev\Gingey\build\libs\GLFW && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build libs/GLFW/install/local: phony libs/GLFW/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build libs/GLFW/CMakeFiles/install/strip.util: CUSTOM_COMMAND libs/GLFW/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Dev\Gingey\build\libs\GLFW && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build libs/GLFW/install/strip: phony libs/GLFW/CMakeFiles/install/strip.util
+
+
+#############################################
+# Custom command for libs\GLFW\CMakeFiles\uninstall
+
+build libs/GLFW/CMakeFiles/uninstall | ${cmake_ninja_workdir}libs/GLFW/CMakeFiles/uninstall: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Dev\Gingey\build\libs\GLFW && "C:\Program Files\CMake\bin\cmake.exe" -P D:/Dev/Gingey/build/libs/GLFW/cmake_uninstall.cmake"
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# D:/Dev/Gingey/libs/GLFW/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target glfw
+
+
+#############################################
+# Order-only phony target for glfw
+
+build cmake_object_order_depends_target_glfw: phony || .
+
+build libs/GLFW/src/CMakeFiles/glfw.dir/context.c.obj: C_COMPILER__glfw_unscanned_Debug D$:/Dev/Gingey/libs/GLFW/src/context.c || cmake_object_order_depends_target_glfw
+  CONFIG = Debug
+  DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = libs\GLFW\src\CMakeFiles\glfw.dir\context.c.obj.d
+  FLAGS = -O0 -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall
+  INCLUDES = -ID:/Dev/Gingey/libs/GLFW/include -ID:/Dev/Gingey/libs/GLFW/src -ID:/Dev/Gingey/build/libs/GLFW/src
+  OBJECT_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = libs\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = libs\GLFW\src\glfw3.pdb
+
+build libs/GLFW/src/CMakeFiles/glfw.dir/init.c.obj: C_COMPILER__glfw_unscanned_Debug D$:/Dev/Gingey/libs/GLFW/src/init.c || cmake_object_order_depends_target_glfw
+  CONFIG = Debug
+  DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = libs\GLFW\src\CMakeFiles\glfw.dir\init.c.obj.d
+  FLAGS = -O0 -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall
+  INCLUDES = -ID:/Dev/Gingey/libs/GLFW/include -ID:/Dev/Gingey/libs/GLFW/src -ID:/Dev/Gingey/build/libs/GLFW/src
+  OBJECT_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = libs\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = libs\GLFW\src\glfw3.pdb
+
+build libs/GLFW/src/CMakeFiles/glfw.dir/input.c.obj: C_COMPILER__glfw_unscanned_Debug D$:/Dev/Gingey/libs/GLFW/src/input.c || cmake_object_order_depends_target_glfw
+  CONFIG = Debug
+  DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = libs\GLFW\src\CMakeFiles\glfw.dir\input.c.obj.d
+  FLAGS = -O0 -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall
+  INCLUDES = -ID:/Dev/Gingey/libs/GLFW/include -ID:/Dev/Gingey/libs/GLFW/src -ID:/Dev/Gingey/build/libs/GLFW/src
+  OBJECT_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = libs\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = libs\GLFW\src\glfw3.pdb
+
+build libs/GLFW/src/CMakeFiles/glfw.dir/monitor.c.obj: C_COMPILER__glfw_unscanned_Debug D$:/Dev/Gingey/libs/GLFW/src/monitor.c || cmake_object_order_depends_target_glfw
+  CONFIG = Debug
+  DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = libs\GLFW\src\CMakeFiles\glfw.dir\monitor.c.obj.d
+  FLAGS = -O0 -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall
+  INCLUDES = -ID:/Dev/Gingey/libs/GLFW/include -ID:/Dev/Gingey/libs/GLFW/src -ID:/Dev/Gingey/build/libs/GLFW/src
+  OBJECT_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = libs\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = libs\GLFW\src\glfw3.pdb
+
+build libs/GLFW/src/CMakeFiles/glfw.dir/platform.c.obj: C_COMPILER__glfw_unscanned_Debug D$:/Dev/Gingey/libs/GLFW/src/platform.c || cmake_object_order_depends_target_glfw
+  CONFIG = Debug
+  DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = libs\GLFW\src\CMakeFiles\glfw.dir\platform.c.obj.d
+  FLAGS = -O0 -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall
+  INCLUDES = -ID:/Dev/Gingey/libs/GLFW/include -ID:/Dev/Gingey/libs/GLFW/src -ID:/Dev/Gingey/build/libs/GLFW/src
+  OBJECT_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = libs\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = libs\GLFW\src\glfw3.pdb
+
+build libs/GLFW/src/CMakeFiles/glfw.dir/vulkan.c.obj: C_COMPILER__glfw_unscanned_Debug D$:/Dev/Gingey/libs/GLFW/src/vulkan.c || cmake_object_order_depends_target_glfw
+  CONFIG = Debug
+  DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = libs\GLFW\src\CMakeFiles\glfw.dir\vulkan.c.obj.d
+  FLAGS = -O0 -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall
+  INCLUDES = -ID:/Dev/Gingey/libs/GLFW/include -ID:/Dev/Gingey/libs/GLFW/src -ID:/Dev/Gingey/build/libs/GLFW/src
+  OBJECT_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = libs\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = libs\GLFW\src\glfw3.pdb
+
+build libs/GLFW/src/CMakeFiles/glfw.dir/window.c.obj: C_COMPILER__glfw_unscanned_Debug D$:/Dev/Gingey/libs/GLFW/src/window.c || cmake_object_order_depends_target_glfw
+  CONFIG = Debug
+  DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = libs\GLFW\src\CMakeFiles\glfw.dir\window.c.obj.d
+  FLAGS = -O0 -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall
+  INCLUDES = -ID:/Dev/Gingey/libs/GLFW/include -ID:/Dev/Gingey/libs/GLFW/src -ID:/Dev/Gingey/build/libs/GLFW/src
+  OBJECT_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = libs\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = libs\GLFW\src\glfw3.pdb
+
+build libs/GLFW/src/CMakeFiles/glfw.dir/egl_context.c.obj: C_COMPILER__glfw_unscanned_Debug D$:/Dev/Gingey/libs/GLFW/src/egl_context.c || cmake_object_order_depends_target_glfw
+  CONFIG = Debug
+  DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = libs\GLFW\src\CMakeFiles\glfw.dir\egl_context.c.obj.d
+  FLAGS = -O0 -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall
+  INCLUDES = -ID:/Dev/Gingey/libs/GLFW/include -ID:/Dev/Gingey/libs/GLFW/src -ID:/Dev/Gingey/build/libs/GLFW/src
+  OBJECT_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = libs\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = libs\GLFW\src\glfw3.pdb
+
+build libs/GLFW/src/CMakeFiles/glfw.dir/osmesa_context.c.obj: C_COMPILER__glfw_unscanned_Debug D$:/Dev/Gingey/libs/GLFW/src/osmesa_context.c || cmake_object_order_depends_target_glfw
+  CONFIG = Debug
+  DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = libs\GLFW\src\CMakeFiles\glfw.dir\osmesa_context.c.obj.d
+  FLAGS = -O0 -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall
+  INCLUDES = -ID:/Dev/Gingey/libs/GLFW/include -ID:/Dev/Gingey/libs/GLFW/src -ID:/Dev/Gingey/build/libs/GLFW/src
+  OBJECT_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = libs\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = libs\GLFW\src\glfw3.pdb
+
+build libs/GLFW/src/CMakeFiles/glfw.dir/null_init.c.obj: C_COMPILER__glfw_unscanned_Debug D$:/Dev/Gingey/libs/GLFW/src/null_init.c || cmake_object_order_depends_target_glfw
+  CONFIG = Debug
+  DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = libs\GLFW\src\CMakeFiles\glfw.dir\null_init.c.obj.d
+  FLAGS = -O0 -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall
+  INCLUDES = -ID:/Dev/Gingey/libs/GLFW/include -ID:/Dev/Gingey/libs/GLFW/src -ID:/Dev/Gingey/build/libs/GLFW/src
+  OBJECT_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = libs\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = libs\GLFW\src\glfw3.pdb
+
+build libs/GLFW/src/CMakeFiles/glfw.dir/null_monitor.c.obj: C_COMPILER__glfw_unscanned_Debug D$:/Dev/Gingey/libs/GLFW/src/null_monitor.c || cmake_object_order_depends_target_glfw
+  CONFIG = Debug
+  DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = libs\GLFW\src\CMakeFiles\glfw.dir\null_monitor.c.obj.d
+  FLAGS = -O0 -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall
+  INCLUDES = -ID:/Dev/Gingey/libs/GLFW/include -ID:/Dev/Gingey/libs/GLFW/src -ID:/Dev/Gingey/build/libs/GLFW/src
+  OBJECT_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = libs\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = libs\GLFW\src\glfw3.pdb
+
+build libs/GLFW/src/CMakeFiles/glfw.dir/null_window.c.obj: C_COMPILER__glfw_unscanned_Debug D$:/Dev/Gingey/libs/GLFW/src/null_window.c || cmake_object_order_depends_target_glfw
+  CONFIG = Debug
+  DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = libs\GLFW\src\CMakeFiles\glfw.dir\null_window.c.obj.d
+  FLAGS = -O0 -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall
+  INCLUDES = -ID:/Dev/Gingey/libs/GLFW/include -ID:/Dev/Gingey/libs/GLFW/src -ID:/Dev/Gingey/build/libs/GLFW/src
+  OBJECT_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = libs\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = libs\GLFW\src\glfw3.pdb
+
+build libs/GLFW/src/CMakeFiles/glfw.dir/null_joystick.c.obj: C_COMPILER__glfw_unscanned_Debug D$:/Dev/Gingey/libs/GLFW/src/null_joystick.c || cmake_object_order_depends_target_glfw
+  CONFIG = Debug
+  DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = libs\GLFW\src\CMakeFiles\glfw.dir\null_joystick.c.obj.d
+  FLAGS = -O0 -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall
+  INCLUDES = -ID:/Dev/Gingey/libs/GLFW/include -ID:/Dev/Gingey/libs/GLFW/src -ID:/Dev/Gingey/build/libs/GLFW/src
+  OBJECT_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = libs\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = libs\GLFW\src\glfw3.pdb
+
+build libs/GLFW/src/CMakeFiles/glfw.dir/win32_module.c.obj: C_COMPILER__glfw_unscanned_Debug D$:/Dev/Gingey/libs/GLFW/src/win32_module.c || cmake_object_order_depends_target_glfw
+  CONFIG = Debug
+  DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = libs\GLFW\src\CMakeFiles\glfw.dir\win32_module.c.obj.d
+  FLAGS = -O0 -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall
+  INCLUDES = -ID:/Dev/Gingey/libs/GLFW/include -ID:/Dev/Gingey/libs/GLFW/src -ID:/Dev/Gingey/build/libs/GLFW/src
+  OBJECT_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = libs\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = libs\GLFW\src\glfw3.pdb
+
+build libs/GLFW/src/CMakeFiles/glfw.dir/win32_time.c.obj: C_COMPILER__glfw_unscanned_Debug D$:/Dev/Gingey/libs/GLFW/src/win32_time.c || cmake_object_order_depends_target_glfw
+  CONFIG = Debug
+  DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = libs\GLFW\src\CMakeFiles\glfw.dir\win32_time.c.obj.d
+  FLAGS = -O0 -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall
+  INCLUDES = -ID:/Dev/Gingey/libs/GLFW/include -ID:/Dev/Gingey/libs/GLFW/src -ID:/Dev/Gingey/build/libs/GLFW/src
+  OBJECT_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = libs\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = libs\GLFW\src\glfw3.pdb
+
+build libs/GLFW/src/CMakeFiles/glfw.dir/win32_thread.c.obj: C_COMPILER__glfw_unscanned_Debug D$:/Dev/Gingey/libs/GLFW/src/win32_thread.c || cmake_object_order_depends_target_glfw
+  CONFIG = Debug
+  DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = libs\GLFW\src\CMakeFiles\glfw.dir\win32_thread.c.obj.d
+  FLAGS = -O0 -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall
+  INCLUDES = -ID:/Dev/Gingey/libs/GLFW/include -ID:/Dev/Gingey/libs/GLFW/src -ID:/Dev/Gingey/build/libs/GLFW/src
+  OBJECT_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = libs\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = libs\GLFW\src\glfw3.pdb
+
+build libs/GLFW/src/CMakeFiles/glfw.dir/win32_init.c.obj: C_COMPILER__glfw_unscanned_Debug D$:/Dev/Gingey/libs/GLFW/src/win32_init.c || cmake_object_order_depends_target_glfw
+  CONFIG = Debug
+  DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = libs\GLFW\src\CMakeFiles\glfw.dir\win32_init.c.obj.d
+  FLAGS = -O0 -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall
+  INCLUDES = -ID:/Dev/Gingey/libs/GLFW/include -ID:/Dev/Gingey/libs/GLFW/src -ID:/Dev/Gingey/build/libs/GLFW/src
+  OBJECT_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = libs\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = libs\GLFW\src\glfw3.pdb
+
+build libs/GLFW/src/CMakeFiles/glfw.dir/win32_joystick.c.obj: C_COMPILER__glfw_unscanned_Debug D$:/Dev/Gingey/libs/GLFW/src/win32_joystick.c || cmake_object_order_depends_target_glfw
+  CONFIG = Debug
+  DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = libs\GLFW\src\CMakeFiles\glfw.dir\win32_joystick.c.obj.d
+  FLAGS = -O0 -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall
+  INCLUDES = -ID:/Dev/Gingey/libs/GLFW/include -ID:/Dev/Gingey/libs/GLFW/src -ID:/Dev/Gingey/build/libs/GLFW/src
+  OBJECT_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = libs\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = libs\GLFW\src\glfw3.pdb
+
+build libs/GLFW/src/CMakeFiles/glfw.dir/win32_monitor.c.obj: C_COMPILER__glfw_unscanned_Debug D$:/Dev/Gingey/libs/GLFW/src/win32_monitor.c || cmake_object_order_depends_target_glfw
+  CONFIG = Debug
+  DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = libs\GLFW\src\CMakeFiles\glfw.dir\win32_monitor.c.obj.d
+  FLAGS = -O0 -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall
+  INCLUDES = -ID:/Dev/Gingey/libs/GLFW/include -ID:/Dev/Gingey/libs/GLFW/src -ID:/Dev/Gingey/build/libs/GLFW/src
+  OBJECT_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = libs\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = libs\GLFW\src\glfw3.pdb
+
+build libs/GLFW/src/CMakeFiles/glfw.dir/win32_window.c.obj: C_COMPILER__glfw_unscanned_Debug D$:/Dev/Gingey/libs/GLFW/src/win32_window.c || cmake_object_order_depends_target_glfw
+  CONFIG = Debug
+  DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = libs\GLFW\src\CMakeFiles\glfw.dir\win32_window.c.obj.d
+  FLAGS = -O0 -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall
+  INCLUDES = -ID:/Dev/Gingey/libs/GLFW/include -ID:/Dev/Gingey/libs/GLFW/src -ID:/Dev/Gingey/build/libs/GLFW/src
+  OBJECT_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = libs\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = libs\GLFW\src\glfw3.pdb
+
+build libs/GLFW/src/CMakeFiles/glfw.dir/wgl_context.c.obj: C_COMPILER__glfw_unscanned_Debug D$:/Dev/Gingey/libs/GLFW/src/wgl_context.c || cmake_object_order_depends_target_glfw
+  CONFIG = Debug
+  DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_WIN32 -D_UNICODE
+  DEP_FILE = libs\GLFW\src\CMakeFiles\glfw.dir\wgl_context.c.obj.d
+  FLAGS = -O0 -std=c99 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall
+  INCLUDES = -ID:/Dev/Gingey/libs/GLFW/include -ID:/Dev/Gingey/libs/GLFW/src -ID:/Dev/Gingey/build/libs/GLFW/src
+  OBJECT_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  OBJECT_FILE_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  TARGET_COMPILE_PDB = libs\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_PDB = libs\GLFW\src\glfw3.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target glfw
+
+
+#############################################
+# Link the static library libs\GLFW\src\glfw3.lib
+
+build libs/GLFW/src/glfw3.lib: C_STATIC_LIBRARY_LINKER__glfw_Debug libs/GLFW/src/CMakeFiles/glfw.dir/context.c.obj libs/GLFW/src/CMakeFiles/glfw.dir/init.c.obj libs/GLFW/src/CMakeFiles/glfw.dir/input.c.obj libs/GLFW/src/CMakeFiles/glfw.dir/monitor.c.obj libs/GLFW/src/CMakeFiles/glfw.dir/platform.c.obj libs/GLFW/src/CMakeFiles/glfw.dir/vulkan.c.obj libs/GLFW/src/CMakeFiles/glfw.dir/window.c.obj libs/GLFW/src/CMakeFiles/glfw.dir/egl_context.c.obj libs/GLFW/src/CMakeFiles/glfw.dir/osmesa_context.c.obj libs/GLFW/src/CMakeFiles/glfw.dir/null_init.c.obj libs/GLFW/src/CMakeFiles/glfw.dir/null_monitor.c.obj libs/GLFW/src/CMakeFiles/glfw.dir/null_window.c.obj libs/GLFW/src/CMakeFiles/glfw.dir/null_joystick.c.obj libs/GLFW/src/CMakeFiles/glfw.dir/win32_module.c.obj libs/GLFW/src/CMakeFiles/glfw.dir/win32_time.c.obj libs/GLFW/src/CMakeFiles/glfw.dir/win32_thread.c.obj libs/GLFW/src/CMakeFiles/glfw.dir/win32_init.c.obj libs/GLFW/src/CMakeFiles/glfw.dir/win32_joystick.c.obj libs/GLFW/src/CMakeFiles/glfw.dir/win32_monitor.c.obj libs/GLFW/src/CMakeFiles/glfw.dir/win32_window.c.obj libs/GLFW/src/CMakeFiles/glfw.dir/wgl_context.c.obj
+  CONFIG = Debug
+  LANGUAGE_COMPILE_FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
+  OBJECT_DIR = libs\GLFW\src\CMakeFiles\glfw.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = libs\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
+  TARGET_FILE = libs\GLFW\src\glfw3.lib
+  TARGET_PDB = libs\GLFW\src\glfw3.pdb
+
+
+#############################################
+# Utility command for update_mappings
+
+build libs/GLFW/src/update_mappings: phony libs/GLFW/src/CMakeFiles/update_mappings
+
+
+#############################################
+# Utility command for edit_cache
+
+build libs/GLFW/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Dev\Gingey\build\libs\GLFW\src && "C:\Program Files\CMake\bin\cmake-gui.exe" -SD:\Dev\Gingey -BD:\Dev\Gingey\build"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build libs/GLFW/src/edit_cache: phony libs/GLFW/src/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build libs/GLFW/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Dev\Gingey\build\libs\GLFW\src && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SD:\Dev\Gingey -BD:\Dev\Gingey\build"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build libs/GLFW/src/rebuild_cache: phony libs/GLFW/src/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build libs/GLFW/src/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build libs/GLFW/src/CMakeFiles/install.util: CUSTOM_COMMAND libs/GLFW/src/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Dev\Gingey\build\libs\GLFW\src && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build libs/GLFW/src/install: phony libs/GLFW/src/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build libs/GLFW/src/CMakeFiles/install/local.util: CUSTOM_COMMAND libs/GLFW/src/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Dev\Gingey\build\libs\GLFW\src && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build libs/GLFW/src/install/local: phony libs/GLFW/src/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build libs/GLFW/src/CMakeFiles/install/strip.util: CUSTOM_COMMAND libs/GLFW/src/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Dev\Gingey\build\libs\GLFW\src && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build libs/GLFW/src/install/strip: phony libs/GLFW/src/CMakeFiles/install/strip.util
+
+
+#############################################
+# Custom command for libs\GLFW\src\CMakeFiles\update_mappings
+
+build libs/GLFW/src/CMakeFiles/update_mappings | ${cmake_ninja_workdir}libs/GLFW/src/CMakeFiles/update_mappings: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Dev\Gingey\libs\GLFW\src && "C:\Program Files\CMake\bin\cmake.exe" -P D:/Dev/Gingey/libs/GLFW/CMake/GenerateMappings.cmake mappings.h.in mappings.h"
+  DESC = Updating gamepad mappings from upstream repository
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# D:/Dev/Gingey/libs/GLFW/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build libs/GLFW/docs/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Dev\Gingey\build\libs\GLFW\docs && "C:\Program Files\CMake\bin\cmake-gui.exe" -SD:\Dev\Gingey -BD:\Dev\Gingey\build"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build libs/GLFW/docs/edit_cache: phony libs/GLFW/docs/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build libs/GLFW/docs/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Dev\Gingey\build\libs\GLFW\docs && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SD:\Dev\Gingey -BD:\Dev\Gingey\build"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build libs/GLFW/docs/rebuild_cache: phony libs/GLFW/docs/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build libs/GLFW/docs/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build libs/GLFW/docs/CMakeFiles/install.util: CUSTOM_COMMAND libs/GLFW/docs/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Dev\Gingey\build\libs\GLFW\docs && "C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build libs/GLFW/docs/install: phony libs/GLFW/docs/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build libs/GLFW/docs/CMakeFiles/install/local.util: CUSTOM_COMMAND libs/GLFW/docs/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Dev\Gingey\build\libs\GLFW\docs && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build libs/GLFW/docs/install/local: phony libs/GLFW/docs/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build libs/GLFW/docs/CMakeFiles/install/strip.util: CUSTOM_COMMAND libs/GLFW/docs/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Dev\Gingey\build\libs\GLFW\docs && "C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build libs/GLFW/docs/install/strip: phony libs/GLFW/docs/CMakeFiles/install/strip.util
+
 # =============================================================================
 # Target aliases.
 
@@ -251,9 +791,17 @@ build gingey: phony D$:/Dev/Gingey/bin/engine/gingey.exe
 
 build gingey.exe: phony D$:/Dev/Gingey/bin/engine/gingey.exe
 
+build glfw: phony libs/GLFW/src/glfw3.lib
+
+build glfw3.lib: phony libs/GLFW/src/glfw3.lib
+
 build rogue_like_sim: phony D$:/Dev/Gingey/bin/game/rogue_like_sim.exe
 
 build rogue_like_sim.exe: phony D$:/Dev/Gingey/bin/game/rogue_like_sim.exe
+
+build uninstall: phony libs/GLFW/uninstall
+
+build update_mappings: phony libs/GLFW/src/update_mappings
 
 # =============================================================================
 # Folder targets.
@@ -263,14 +811,56 @@ build rogue_like_sim.exe: phony D$:/Dev/Gingey/bin/game/rogue_like_sim.exe
 #############################################
 # Folder: D:/Dev/Gingey/build
 
-build codegen: phony
+build codegen: phony libs/GLFW/codegen
+
+# =============================================================================
+
+#############################################
+# Folder: D:/Dev/Gingey/build/libs/GLFW
+
+build libs/GLFW/codegen: phony libs/GLFW/src/codegen libs/GLFW/docs/codegen
+
+# =============================================================================
+
+#############################################
+# Folder: D:/Dev/Gingey/build/libs/GLFW/docs
+
+build libs/GLFW/docs/codegen: phony
+
+# =============================================================================
+
+#############################################
+# Folder: D:/Dev/Gingey/build/libs/GLFW/src
+
+build libs/GLFW/src/codegen: phony
 
 # =============================================================================
 
 #############################################
 # Folder: D:/Dev/Gingey/build
 
-build all: phony D$:/Dev/Gingey/bin/engine/gingey.exe D$:/Dev/Gingey/bin/game/rogue_like_sim.exe
+build all: phony D$:/Dev/Gingey/bin/engine/gingey.exe D$:/Dev/Gingey/bin/game/rogue_like_sim.exe libs/GLFW/all
+
+# =============================================================================
+
+#############################################
+# Folder: D:/Dev/Gingey/build/libs/GLFW
+
+build libs/GLFW/all: phony libs/GLFW/src/all libs/GLFW/docs/all
+
+# =============================================================================
+
+#############################################
+# Folder: D:/Dev/Gingey/build/libs/GLFW/docs
+
+build libs/GLFW/docs/all: phony
+
+# =============================================================================
+
+#############################################
+# Folder: D:/Dev/Gingey/build/libs/GLFW/src
+
+build libs/GLFW/src/all: phony libs/GLFW/src/glfw3.lib
 
 # =============================================================================
 # Built-in targets
@@ -279,14 +869,14 @@ build all: phony D$:/Dev/Gingey/bin/engine/gingey.exe D$:/Dev/Gingey/bin/game/ro
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja D$:/Dev/Gingey/build/cmake_install.cmake: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/Clang-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/Clang.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindPackageMessage.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindVulkan.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Linker/LLD-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Linker/LLD.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Linker/MSVC.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-LLD-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-LLD.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-MSVC.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-Clang-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-Clang.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/4.1.0-rc4/CMakeCCompiler.cmake CMakeFiles/4.1.0-rc4/CMakeRCCompiler.cmake CMakeFiles/4.1.0-rc4/CMakeSystem.cmake D$:/Dev/Gingey/CMakeLists.txt
+build build.ninja D$:/Dev/Gingey/build/cmake_install.cmake D$:/Dev/Gingey/build/libs/GLFW/cmake_install.cmake D$:/Dev/Gingey/build/libs/GLFW/src/cmake_install.cmake D$:/Dev/Gingey/build/libs/GLFW/docs/cmake_install.cmake: RERUN_CMAKE | C$:/Program$ Files/CMake/share/cmake-4.1/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeDependentOption.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CheckCSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CheckIncludeFile.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CheckLibraryExists.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/Clang-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/Clang.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindDoxygen.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindPackageMessage.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindThreads.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindVulkan.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/GNUInstallDirs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Linker/LLD-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Linker/LLD.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Linker/MSVC.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-LLD-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-LLD.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-MSVC.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-Clang-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-Clang.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/4.1.0-rc4/CMakeCCompiler.cmake CMakeFiles/4.1.0-rc4/CMakeRCCompiler.cmake CMakeFiles/4.1.0-rc4/CMakeSystem.cmake D$:/Dev/Gingey/CMakeLists.txt D$:/Dev/Gingey/libs/GLFW/CMakeLists.txt D$:/Dev/Gingey/libs/GLFW/CMake/cmake_uninstall.cmake.in D$:/Dev/Gingey/libs/GLFW/CMake/glfw3.pc.in D$:/Dev/Gingey/libs/GLFW/CMake/glfw3Config.cmake.in D$:/Dev/Gingey/libs/GLFW/docs/CMakeLists.txt D$:/Dev/Gingey/libs/GLFW/src/CMakeLists.txt
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/Clang-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/Clang.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindPackageMessage.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindVulkan.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Linker/LLD-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Linker/LLD.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Linker/MSVC.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-LLD-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-LLD.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-MSVC.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-Clang-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-Clang.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/4.1.0-rc4/CMakeCCompiler.cmake CMakeFiles/4.1.0-rc4/CMakeRCCompiler.cmake CMakeFiles/4.1.0-rc4/CMakeSystem.cmake D$:/Dev/Gingey/CMakeLists.txt: phony
+build C$:/Program$ Files/CMake/share/cmake-4.1/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeDependentOption.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeRCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CheckCSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CheckIncludeFile.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CheckLibraryExists.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/Clang-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/Clang.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindDoxygen.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindPackageMessage.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindThreads.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/FindVulkan.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/GNUInstallDirs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Linker/LLD-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Linker/LLD.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Linker/MSVC.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-LLD-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-LLD.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-MSVC.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-Clang-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-Clang.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Windows.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/4.1.0-rc4/CMakeCCompiler.cmake CMakeFiles/4.1.0-rc4/CMakeRCCompiler.cmake CMakeFiles/4.1.0-rc4/CMakeSystem.cmake D$:/Dev/Gingey/CMakeLists.txt D$:/Dev/Gingey/libs/GLFW/CMakeLists.txt D$:/Dev/Gingey/libs/GLFW/CMake/cmake_uninstall.cmake.in D$:/Dev/Gingey/libs/GLFW/CMake/glfw3.pc.in D$:/Dev/Gingey/libs/GLFW/CMake/glfw3Config.cmake.in D$:/Dev/Gingey/libs/GLFW/docs/CMakeLists.txt D$:/Dev/Gingey/libs/GLFW/src/CMakeLists.txt: phony
 
 
 #############################################

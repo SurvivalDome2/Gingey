@@ -10,6 +10,8 @@ if (BUILD_ENGINE)
 
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/engine)
 
+    add_subdirectory(libs/GLFW)
+
     add_executable(gingey engine/src/core/main.c)
 
     set(CMAKE_C_STANDARD 17)
@@ -21,8 +23,6 @@ if (BUILD_ENGINE)
     endif()
 
     find_package(Vulkan REQUIRED COMPONENTS glslc)
-    find_package(glm)
-    find_package(glfw3 REQUIRED)
 
     target_include_directories(gingey PRIVATE engine/include)
 
@@ -58,10 +58,10 @@ if (BUILD_ENGINE)
         target_link_libraries(gingey PRIVATE user32 gdi32)
     endif()
 
-    #target_compile_options(gingey PRIVATE
-    #  $<$<C_COMPILER_ID:MSVC>:/W4 /WX>
-    #  $<$<C_COMPILER_ID:GNU,Clang,AppleClang>:-Wall -Wextra -Wpedantic -Werror>
-    #)
+    target_compile_options(gingey PRIVATE
+      $<$<C_COMPILER_ID:MSVC>:/W4 /WX>
+      $<$<C_COMPILER_ID:GNU,Clang,AppleClang>:-Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit>
+    )
 endif()
 
 if (BUILD_GAME)
