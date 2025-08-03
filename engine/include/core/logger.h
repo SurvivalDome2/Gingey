@@ -5,6 +5,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include <stdio.h>
+#include <process.h>
 
 #include "../defines.h"
 
@@ -20,15 +21,17 @@ typedef enum
     LOG_LEVEL_FATAL
 } LogLevel;
 
-typedef struct {
+typedef struct
+{
     LogLevel logLevel;
     char message[MESSAGE_CHAR_COUNT];
     SYSTEMTIME timeOfMessage;
     int line;
-    char* file;
+    char file[255];
 } LogEntry;
 
-typedef struct {
+typedef struct
+{
     LogEntry logEntries[MAX_LOG_QUEUE];
     int oldestMessageIndex;
     int newestMessageIndex;
@@ -40,8 +43,8 @@ typedef struct {
 
 bool loggingThreadInit(void);
 
-void loggerShutdown(void);
-
-DWORD WIN32 loggingThreadProcessor(LPVOID lpParameter);
+unsigned int __stdcall loggingThreadProcessor(void* arg);
 
 void logEnqueue(LogLevel logLevel, const char* message, SYSTEMTIME time, int line, const char* file);
+
+void loggerShutdown(void);
