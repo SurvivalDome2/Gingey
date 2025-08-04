@@ -2,17 +2,13 @@
 
 int main(void)
 {
-    loggingThreadInit();
+    char* filePath = "test.ini";
 
-    logEnqueue(LOG_LEVEL_TRACE, "Test for LOG_LEVEL_TRACE", systemTime, __LINE__, __FILE__);
-    logEnqueue(LOG_LEVEL_INFO, "Test for LOG_LEVEL_INFO", systemTime, __LINE__, __FILE__);
-    logEnqueue(LOG_LEVEL_WARNING, "Test for LOG_LEVEL_WARNING", systemTime, __LINE__, __FILE__);
-    logEnqueue(LOG_LEVEL_ERROR, "Test for LOG_LEVEL_ERROR", systemTime, __LINE__, __FILE__);
-    logEnqueue(LOG_LEVEL_FATAL, "Test for LOG_LEVEL_FATAL", systemTime, __LINE__, __FILE__);
+    normalizeFilePath(filePath);
 
-    Sleep(100);
+    char* buffer = prepareFile(filePath);
 
-    loggerShutdown();
+    parseFile(buffer);
 
     return 0;
 }

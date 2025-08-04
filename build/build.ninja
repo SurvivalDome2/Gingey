@@ -99,6 +99,16 @@ build CMakeFiles/gingey.dir/engine/src/core/event_system.c.obj: C_COMPILER__ging
   TARGET_COMPILE_PDB = CMakeFiles\gingey.dir\
   TARGET_PDB = D:\Dev\Gingey\bin\engine\gingey.pdb
 
+build CMakeFiles/gingey.dir/engine/src/core/ini.c.obj: C_COMPILER__gingey_unscanned_Debug D$:/Dev/Gingey/engine/src/core/ini.c || cmake_object_order_depends_target_gingey
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\gingey.dir\engine\src\core\ini.c.obj.d
+  FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations
+  INCLUDES = -ID:/Dev/Gingey/engine/include -ID:/Dev/Gingey/libs/GLFW/include -isystem C:/VulkanSDK/1.4.321.1/include
+  OBJECT_DIR = CMakeFiles\gingey.dir
+  OBJECT_FILE_DIR = CMakeFiles\gingey.dir\engine\src\core
+  TARGET_COMPILE_PDB = CMakeFiles\gingey.dir\
+  TARGET_PDB = D:\Dev\Gingey\bin\engine\gingey.pdb
+
 build CMakeFiles/gingey.dir/engine/src/platform/platform.c.obj: C_COMPILER__gingey_unscanned_Debug D$:/Dev/Gingey/engine/src/platform/platform.c || cmake_object_order_depends_target_gingey
   CONFIG = Debug
   DEP_FILE = CMakeFiles\gingey.dir\engine\src\platform\platform.c.obj.d
@@ -167,7 +177,7 @@ build CMakeFiles/gingey.dir/engine/src/graphics/texture.c.obj: C_COMPILER__ginge
 #############################################
 # Link the executable D:\Dev\Gingey\bin\engine\gingey.exe
 
-build D$:/Dev/Gingey/bin/engine/gingey.exe: C_EXECUTABLE_LINKER__gingey_Debug CMakeFiles/gingey.dir/engine/src/core/main.c.obj CMakeFiles/gingey.dir/engine/src/core/engine.c.obj CMakeFiles/gingey.dir/engine/src/core/memory.c.obj CMakeFiles/gingey.dir/engine/src/core/logger.c.obj CMakeFiles/gingey.dir/engine/src/core/event_system.c.obj CMakeFiles/gingey.dir/engine/src/platform/platform.c.obj CMakeFiles/gingey.dir/engine/src/platform/win32_platform.c.obj CMakeFiles/gingey.dir/engine/src/graphics/vulkan_renderer.c.obj CMakeFiles/gingey.dir/engine/src/graphics/vulkan_utils.c.obj CMakeFiles/gingey.dir/engine/src/graphics/shader.c.obj CMakeFiles/gingey.dir/engine/src/graphics/texture.c.obj | C$:/VulkanSDK/1.4.321.1/Lib/vulkan-1.lib libs/GLFW/src/glfw3.lib || libs/GLFW/src/glfw3.lib
+build D$:/Dev/Gingey/bin/engine/gingey.exe: C_EXECUTABLE_LINKER__gingey_Debug CMakeFiles/gingey.dir/engine/src/core/main.c.obj CMakeFiles/gingey.dir/engine/src/core/engine.c.obj CMakeFiles/gingey.dir/engine/src/core/memory.c.obj CMakeFiles/gingey.dir/engine/src/core/logger.c.obj CMakeFiles/gingey.dir/engine/src/core/event_system.c.obj CMakeFiles/gingey.dir/engine/src/core/ini.c.obj CMakeFiles/gingey.dir/engine/src/platform/platform.c.obj CMakeFiles/gingey.dir/engine/src/platform/win32_platform.c.obj CMakeFiles/gingey.dir/engine/src/graphics/vulkan_renderer.c.obj CMakeFiles/gingey.dir/engine/src/graphics/vulkan_utils.c.obj CMakeFiles/gingey.dir/engine/src/graphics/shader.c.obj CMakeFiles/gingey.dir/engine/src/graphics/texture.c.obj | C$:/VulkanSDK/1.4.321.1/Lib/vulkan-1.lib libs/GLFW/src/glfw3.lib || libs/GLFW/src/glfw3.lib
   CONFIG = Debug
   FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
   LINK_FLAGS = -Xlinker /subsystem:console -fuse-ld=lld-link

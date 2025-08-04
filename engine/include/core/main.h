@@ -4,6 +4,7 @@
 
 #include <defines.h>
 #include <core/logger.h>
+#include <core/ini.h>
 
 void* arg;
 
