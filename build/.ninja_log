@@ -13,7 +13,7 @@
 3	636	7758613602098623	libs/GLFW/src/CMakeFiles/glfw.dir/context.c.obj	949e22915f2f915a
 41	652	7758613602498875	libs/GLFW/src/CMakeFiles/glfw.dir/null_init.c.obj	fb6985f6c6c96c1
 25	668	7758613602340320	libs/GLFW/src/CMakeFiles/glfw.dir/window.c.obj	e56de943e59f9a37
-11	299	7760415157023276	CMakeFiles/gingey.dir/engine/src/core/main.c.obj	4866b8354fa9d7e4
+11	288	7760416490891701	CMakeFiles/gingey.dir/engine/src/core/main.c.obj	4866b8354fa9d7e4
 14	60	7758708966481640	CMakeFiles/gingey.dir/engine/src/core/engine.c.obj	a2cb794fe7b3c2a6
 17	62	7758708966628791	CMakeFiles/gingey.dir/engine/src/core/memory.c.obj	2823fe5308c9b054
 15	412	7759517455023636	CMakeFiles/gingey.dir/engine/src/core/logger.c.obj	ee5d28dabd159f89
@@ -34,7 +34,10 @@
 556	939	7758613607635366	libs/GLFW/src/CMakeFiles/glfw.dir/wgl_context.c.obj	aabb1c7d851c586f
 539	951	7758613607479611	libs/GLFW/src/CMakeFiles/glfw.dir/win32_window.c.obj	dd79e3d480f63711
 951	1086	7758613611598568	libs/GLFW/src/glfw3.lib	378e75c36bed1b9d
-288	377	7760415810030704	D:/Dev/Gingey/bin/engine/gingey.exe	59bb8975f50d2ae3
+276	476	7760853161081251	D:/Dev/Gingey/bin/engine/gingey.exe	5e961406ced564c4
 12	288	7760415807291815	CMakeFiles/gingey.dir/engine/src/core/ini.c.obj	eb0e38d7e5b6ba74
-11	288	7760416490891701	CMakeFiles/gingey.dir/engine/src/core/main.c.obj	4866b8354fa9d7e4
-289	374	7760416493646577	D:/Dev/Gingey/bin/engine/gingey.exe	59bb8975f50d2ae3
+11	275	7760853158423246	CMakeFiles/gingey.dir/engine/src/core/multi_thread.c.obj	1daec9a5be2cdf04
+18	320	7760868054142720	CMakeFiles/gingey.dir/engine/src/core/multi_thread.c.obj	1daec9a5be2cdf04
+11	328	7760868054070937	CMakeFiles/gingey.dir/engine/src/core/main.c.obj	4866b8354fa9d7e4
+15	344	7760868054111265	CMakeFiles/gingey.dir/engine/src/core/logger.c.obj	ee5d28dabd159f89
+344	438	7760868057395980	D:/Dev/Gingey/bin/engine/gingey.exe	5e961406ced564c4

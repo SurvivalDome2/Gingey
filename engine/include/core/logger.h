@@ -7,7 +7,9 @@
 #include <stdio.h>
 #include <process.h>
 
-#include "../defines.h"
+#include <defines.h>
+
+#include <core/multi_thread.h>
 
 #define MAX_LOG_QUEUE 128
 #define MESSAGE_CHAR_COUNT 512
@@ -41,7 +43,7 @@ typedef struct
     volatile bool running;
 } LogQueue;
 
-bool loggingThreadInit(void);
+bool loggerInit(void);
 
 unsigned int __stdcall loggingThreadProcessor(void* arg);
 

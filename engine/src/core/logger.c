@@ -4,18 +4,14 @@ static LogQueue logQueue;
 
 uintptr_t hThread;
 
-bool loggingThreadInit(void)
+bool loggerInit(void)
 {
-    InitializeCriticalSection(&logQueue.lock);
-    logQueue.semaphore = CreateSemaphore(NULL, 0, MAX_LOG_QUEUE, NULL);
+    threadInit(loggingThreadProcessor, &logQueue.semaphore, MAX_LOG_QUEUE, &logQueue.lock, &hThread);
+
     logQueue.running = TRUE;
     logQueue.oldestMessageIndex = 0;
     logQueue.newestMessageIndex = 0;
     logQueue.totalQueuedMessages = 0;
-
-    hThread = _beginthreadex(NULL, 0, loggingThreadProcessor, NULL, 0, NULL);
-
-    ReleaseSemaphore(logQueue.semaphore, 1, NULL);
 
     return TRUE;
 }
@@ -149,7 +145,6 @@ void loggerShutdown(void)
     EnterCriticalSection(&logQueue.lock);
     logQueue.running = FALSE;
     LeaveCriticalSection(&logQueue.lock);
-    ReleaseSemaphore(logQueue.semaphore, 1, NULL);
 
     int remaining;
     do
@@ -158,9 +153,8 @@ void loggerShutdown(void)
         remaining = logQueue.totalQueuedMessages;
         LeaveCriticalSection(&logQueue.lock);
         if (remaining > 0) Sleep(10);
-    } while (remaining > 0);
+    }
+    while (remaining > 0);
 
-    DeleteCriticalSection(&logQueue.lock);
-    CloseHandle(logQueue.semaphore);
-    CloseHandle((HANDLE)hThread);
+    threadShutdown(&hThread, &logQueue.semaphore, &logQueue.lock);
 }

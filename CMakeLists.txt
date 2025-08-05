@@ -35,6 +35,7 @@ if (BUILD_ENGINE)
         engine/src/core/logger.c
         engine/src/core/event_system.c
         engine/src/core/ini.c
+        engine/src/core/multi_thread.c
     )
 
     set(PLATFORM_SOURCES

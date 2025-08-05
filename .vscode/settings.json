@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "stdio.h": "c",
-        "defines.h": "c"
+        "defines.h": "c",
+        "logger.h": "c"
     }
 }

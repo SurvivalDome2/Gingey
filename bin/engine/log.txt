@@ -1,0 +1,5 @@
+[08:47:04.623] [File: D:/Dev/Gingey/engine/src/core/main.c] [Line: 7] TRACE: Test for LOG_LEVEL_TRACE
+[08:47:04.623] [File: D:/Dev/Gingey/engine/src/core/main.c] [Line: 8] INFO: Test for LOG_LEVEL_INFO
+[08:47:04.623] [File: D:/Dev/Gingey/engine/src/core/main.c] [Line: 9] WARNING: Test for LOG_LEVEL_WARNING
+[08:47:04.623] [File: D:/Dev/Gingey/engine/src/core/main.c] [Line: 10] ERROR: Test for LOG_LEVEL_ERROR
+[08:47:04.623] [File: D:/Dev/Gingey/engine/src/core/main.c] [Line: 11] FATAL: Test for LOG_LEVEL_FATAL
