@@ -4,15 +4,9 @@ option(BUILD_ENGINE "Build the main engine" OFF)
 option(BUILD_GAME "Build the game" OFF)
 
 if (BUILD_ENGINE)
-    project(gingey
-    LANGUAGES C
-    )
+    project(ginger LANGUAGES C)
 
-    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/engine)
-
-    add_subdirectory(libs/GLFW)
-
-    add_executable(gingey engine/src/core/main.c)
+    set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/engine)
 
     set(CMAKE_C_STANDARD 17)
     set(CMAKE_C_STANDARD_REQUIRED ON)
@@ -24,23 +18,14 @@ if (BUILD_ENGINE)
 
     find_package(Vulkan REQUIRED COMPONENTS glslc)
 
-    target_include_directories(gingey PRIVATE engine/include)
-
-    target_link_libraries(gingey PRIVATE Vulkan::Vulkan glfw)
-
     set(ENGINE_SOURCES
         engine/src/core/engine.c
-        engine/src/core/main.c
         engine/src/core/memory.c
         engine/src/core/logger.c
         engine/src/core/event_system.c
         engine/src/core/ini.c
         engine/src/core/multi_thread.c
-    )
-
-    set(PLATFORM_SOURCES
-        engine/src/platform/platform.c
-        $<$<PLATFORM_ID:Windows>:engine/src/platform/win32_platform.c>
+        engine/src/core/window.c
     )
 
     set(GRAPHICS_SOURCES
@@ -50,30 +35,36 @@ if (BUILD_ENGINE)
         engine/src/graphics/texture.c
     )
 
-    target_sources(gingey PRIVATE
+    add_library(ginger STATIC
         ${ENGINE_SOURCES}
-        ${PLATFORM_SOURCES}
         ${GRAPHICS_SOURCES}
     )
 
-    if(WIN32)
-        target_link_libraries(gingey PRIVATE user32 gdi32)
-    endif()
+    target_sources(ginger PRIVATE
+        ${ENGINE_SOURCES}
+        ${GRAPHICS_SOURCES}
+    )
 
-    target_compile_options(gingey PRIVATE
+    target_include_directories(ginger PUBLIC engine/include)
+
+    target_link_libraries(ginger PUBLIC Vulkan::Vulkan)
+
+    target_link_libraries(ginger PRIVATE user32 gdi32)
+
+    target_compile_options(ginger PRIVATE
       $<$<C_COMPILER_ID:MSVC>:/W4 /WX>
       $<$<C_COMPILER_ID:GNU,Clang,AppleClang>:-Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations>
     )
 endif()
 
 if (BUILD_GAME)
-    project(RogueLikeSim
-    LANGUAGES C
-    )
+    project(game LANGUAGES C)
+
+    set(MY_LIB_PATH "${CMAKE_SOURCE_DIR}/bin/engine/ginger.lib")
 
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/game)
 
-    add_executable(rogue_like_sim game/src/main.c)
+    add_executable(game WIN32 game/src/main.c)
 
     set(CMAKE_C_STANDARD 17)
     set(CMAKE_C_STANDARD_REQUIRED ON)
@@ -83,5 +74,7 @@ if (BUILD_GAME)
     set(CMAKE_BUILD_TYPE Debug CACHE STRING "Build type" FORCE)
     endif()
 
-    target_include_directories(rogue_like_sim PRIVATE include)
+    target_include_directories(game PRIVATE game/include engine/include)
+
+    target_link_libraries(game PRIVATE ${MY_LIB_PATH})
 endif()

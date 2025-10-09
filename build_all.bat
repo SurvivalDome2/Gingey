@@ -1,4 +1,4 @@
-REM Build script for CMake
+REM Build script for Engine and Game
 @ECHO OFF
 SetLocal EnableDelayedExpansion
 

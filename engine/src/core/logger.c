@@ -6,9 +6,9 @@ uintptr_t hThread;
 
 bool loggerInit(void)
 {
-    threadInit(loggingThreadProcessor, &logQueue.semaphore, MAX_LOG_QUEUE, &logQueue.lock, &hThread);
+    threadInit(loggingThreadProcessor, &logQueue.semaphore, MAX_LOG_QUEUE, &logQueue.criticalSection, &hThread);
 
-    logQueue.running = TRUE;
+    atomic_store(&logQueue.running, true);
     logQueue.oldestMessageIndex = 0;
     logQueue.newestMessageIndex = 0;
     logQueue.totalQueuedMessages = 0;
@@ -18,24 +18,45 @@ bool loggerInit(void)
 
 unsigned int __stdcall loggingThreadProcessor(void* arg)
 {
-    (void)arg;
+    (void)arg; // Needed to convince the compiler that arg is being used
 
-    HANDLE hLogFile = CreateFileA("log.txt", FILE_APPEND_DATA, FILE_SHARE_READ, NULL, OPEN_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+    HANDLE hLogFile = CreateFileW(L"log.txt", FILE_APPEND_DATA, FILE_SHARE_READ, NULL, OPEN_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
 
     if(hLogFile == INVALID_HANDLE_VALUE)
     {
-        OutputDebugStringA("[LOGGER] Failed to open log file\n");
+        int line = __LINE__ - 2;
+
+        SYSTEMTIME time;
+        GetLocalTime(&time);
+        char formattedMessage[1024];
+        snprintf(
+            formattedMessage, 
+            sizeof(formattedMessage),
+            "[%02d:%02d:%02d.%03d] [File: %s] [Line: %d] Failed to open log file",
+            time.wHour, time.wMinute, time.wSecond, time.wMilliseconds,
+            __FILE__,
+            line
+        );
+
+        printf("%s\n", formattedMessage);
+
+        EnterCriticalSection(&logQueue.criticalSection);
+        atomic_store(&logQueue.running, false);
+        LeaveCriticalSection(&logQueue.criticalSection);
+
+        threadShutdown(&hThread, &logQueue.semaphore, &logQueue.criticalSection);
+
         return 1;
     }
 
-    while(logQueue.running == TRUE)
+    while(atomic_load(&logQueue.running))
     {
         WaitForSingleObject(logQueue.semaphore, INFINITE);
 
         LogEntry logEntry;
         bool hasEntry = FALSE;
 
-        EnterCriticalSection(&logQueue.lock);
+        EnterCriticalSection(&logQueue.criticalSection);
         
         if(logQueue.totalQueuedMessages > 0)
         {
@@ -45,7 +66,7 @@ unsigned int __stdcall loggingThreadProcessor(void* arg)
             hasEntry = TRUE;
         }
         
-        LeaveCriticalSection(&logQueue.lock);
+        LeaveCriticalSection(&logQueue.criticalSection);
 
         if(hasEntry)
         {
@@ -71,7 +92,7 @@ unsigned int __stdcall loggingThreadProcessor(void* arg)
             }
 
             SYSTEMTIME time;
-            GetSystemTime(&time);
+            GetLocalTime(&time);
             char formattedMessage[2048];
             int len = snprintf(
                 formattedMessage, 
@@ -83,10 +104,6 @@ unsigned int __stdcall loggingThreadProcessor(void* arg)
                 logLevelString,
                 logEntry.message
             );
-
-            OutputDebugStringA(formattedMessage);
-
-            printf("%s", formattedMessage);
 
             DWORD bytesWritten;
 
@@ -105,9 +122,9 @@ unsigned int __stdcall loggingThreadProcessor(void* arg)
 
 void logEnqueue(LogLevel logLevel, const char* message, SYSTEMTIME time, int line, const char* file)
 {
-    EnterCriticalSection(&logQueue.lock);
+    EnterCriticalSection(&logQueue.criticalSection);
     
-    if(!logQueue.running)
+    if(!atomic_load(&logQueue.running))
     {
         return;
     }
@@ -133,7 +150,8 @@ void logEnqueue(LogLevel logLevel, const char* message, SYSTEMTIME time, int lin
 
     bool shouldReleaseSemaphore = (logQueue.totalQueuedMessages < MAX_LOG_QUEUE);
 
-    LeaveCriticalSection(&logQueue.lock);
+    LeaveCriticalSection(&logQueue.criticalSection);
+    
     if(shouldReleaseSemaphore)
     {
         ReleaseSemaphore(logQueue.semaphore, 1, NULL);
@@ -142,19 +160,19 @@ void logEnqueue(LogLevel logLevel, const char* message, SYSTEMTIME time, int lin
 
 void loggerShutdown(void)
 {
-    EnterCriticalSection(&logQueue.lock);
-    logQueue.running = FALSE;
-    LeaveCriticalSection(&logQueue.lock);
+    EnterCriticalSection(&logQueue.criticalSection);
+    atomic_store(&logQueue.running, false);
+    LeaveCriticalSection(&logQueue.criticalSection);
 
     int remaining;
     do
     {
-        EnterCriticalSection(&logQueue.lock);
+        EnterCriticalSection(&logQueue.criticalSection);
         remaining = logQueue.totalQueuedMessages;
-        LeaveCriticalSection(&logQueue.lock);
+        LeaveCriticalSection(&logQueue.criticalSection);
         if (remaining > 0) Sleep(10);
     }
     while (remaining > 0);
 
-    threadShutdown(&hThread, &logQueue.semaphore, &logQueue.lock);
+    threadShutdown(&hThread, &logQueue.semaphore, &logQueue.criticalSection);
 }

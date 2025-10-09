@@ -1,11 +1,20 @@
+#pragma once
+
 typedef unsigned char uchar;
 typedef unsigned short ushort;
 typedef unsigned int uint;
-typedef unsigned long ulong;
-typedef unsigned long long ulonglong;
+typedef unsigned long ul;
+typedef unsigned long long ull;
 
-typedef char bchar;
-typedef int bint;
+typedef char b8;
+typedef int b32;
+
+typedef struct
+{
+    int x;
+    int y;
+    int z;
+} MathVector;
 
 #if defined(__clang__) || defined(__gcc__)
 #define STATIC_ASSERT _Static_assert
@@ -16,7 +25,7 @@ typedef int bint;
 STATIC_ASSERT(sizeof(uchar) == 1, "Expected uchar to be 1 byte.");
 STATIC_ASSERT(sizeof(ushort) == 2, "Expected ushort to be 2 bytes.");
 STATIC_ASSERT(sizeof(uint) == 4, "Expected uint to be 4 bytes.");
-STATIC_ASSERT(sizeof(ulonglong) == 8, "Expected ulong to be 8 bytes.");
+STATIC_ASSERT(sizeof(ull) == 8, "Expected ulong to be 8 bytes.");
 
 #define TRUE 1
 #define FALSE 0

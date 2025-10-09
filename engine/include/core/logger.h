@@ -6,8 +6,9 @@
 #include <string.h>
 #include <stdio.h>
 #include <process.h>
+#include <stdatomic.h>
 
-#include <defines.h>
+#include "../../engine/include/defines.h"
 
 #include <core/multi_thread.h>
 
@@ -29,7 +30,7 @@ typedef struct
     char message[MESSAGE_CHAR_COUNT];
     SYSTEMTIME timeOfMessage;
     int line;
-    char file[255];
+    char file[255]; // Maybe make this dynamic? But seems unnecessary for now
 } LogEntry;
 
 typedef struct
@@ -38,15 +39,15 @@ typedef struct
     int oldestMessageIndex;
     int newestMessageIndex;
     int totalQueuedMessages;
-    CRITICAL_SECTION lock;
+    CRITICAL_SECTION criticalSection;
     HANDLE semaphore;
-    volatile bool running;
+    volatile atomic_bool running;
 } LogQueue;
 
 bool loggerInit(void);
 
-unsigned int __stdcall loggingThreadProcessor(void* arg);
+unsigned int __stdcall loggingThreadProcessor(void* arg); // Requires void* arg, because Windows sucks
 
-void logEnqueue(LogLevel logLevel, const char* message, SYSTEMTIME time, int line, const char* file);
+void logEnqueue(LogLevel logLevel, const char* message, SYSTEMTIME time, int line, const char* file); // Adds log messages to queue
 
 void loggerShutdown(void);

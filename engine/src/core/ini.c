@@ -62,7 +62,7 @@ char* prepareFile(char* filePath)
     return buffer;
 }
 
-// (FIX) Not sure if the nested for loop is optimal, but I really don't want to work on this any longer than I have to.
+// (FIX) The nested for loop is not optimal, but I really don't want to work on this any longer than I have to.
 char* replaceCommentsAndTabsWithSentinelValues(char string[])
 {
     for(int i = 0; string[i]; i++)

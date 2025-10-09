@@ -2,6 +2,9 @@
     "files.associations": {
         "stdio.h": "c",
         "defines.h": "c",
-        "logger.h": "c"
+        "logger.h": "c",
+        "windows.h": "c",
+        "window.h": "c",
+        "main.h": "c"
     }
 }

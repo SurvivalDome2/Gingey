@@ -1,10 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"D:/Dev/Gingey/build/cmake_install.cmake",
-		"D:/Dev/Gingey/build/libs/GLFW/cmake_install.cmake",
-		"D:/Dev/Gingey/build/libs/GLFW/src/cmake_install.cmake",
-		"D:/Dev/Gingey/build/libs/GLFW/docs/cmake_install.cmake"
+		"C:/Dev/Gingey/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }
