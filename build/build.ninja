@@ -186,13 +186,33 @@ build C$:/Dev/Gingey/bin/engine/ginger.lib: C_STATIC_LIBRARY_LINKER__ginger_Debu
 
 build cmake_object_order_depends_target_game: phony || .
 
-build CMakeFiles/game.dir/game/src/main.c.obj: C_COMPILER__game_unscanned_Debug C$:/Dev/Gingey/game/src/main.c || cmake_object_order_depends_target_game
+build CMakeFiles/game.dir/game/src/core/main.c.obj: C_COMPILER__game_unscanned_Debug C$:/Dev/Gingey/game/src/core/main.c || cmake_object_order_depends_target_game
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\game.dir\game\src\main.c.obj.d
+  DEP_FILE = CMakeFiles\game.dir\game\src\core\main.c.obj.d
   FLAGS = -O0 -std=c17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
   INCLUDES = -IC:/Dev/Gingey/game/include -IC:/Dev/Gingey/engine/include
   OBJECT_DIR = CMakeFiles\game.dir
-  OBJECT_FILE_DIR = CMakeFiles\game.dir\game\src
+  OBJECT_FILE_DIR = CMakeFiles\game.dir\game\src\core
+  TARGET_COMPILE_PDB = CMakeFiles\game.dir\
+  TARGET_PDB = C:\Dev\Gingey\bin\game\game.pdb
+
+build CMakeFiles/game.dir/game/src/core/init.c.obj: C_COMPILER__game_unscanned_Debug C$:/Dev/Gingey/game/src/core/init.c || cmake_object_order_depends_target_game
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\game.dir\game\src\core\init.c.obj.d
+  FLAGS = -O0 -std=c17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
+  INCLUDES = -IC:/Dev/Gingey/game/include -IC:/Dev/Gingey/engine/include
+  OBJECT_DIR = CMakeFiles\game.dir
+  OBJECT_FILE_DIR = CMakeFiles\game.dir\game\src\core
+  TARGET_COMPILE_PDB = CMakeFiles\game.dir\
+  TARGET_PDB = C:\Dev\Gingey\bin\game\game.pdb
+
+build CMakeFiles/game.dir/game/src/core/windowProcs.c.obj: C_COMPILER__game_unscanned_Debug C$:/Dev/Gingey/game/src/core/windowProcs.c || cmake_object_order_depends_target_game
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\game.dir\game\src\core\windowProcs.c.obj.d
+  FLAGS = -O0 -std=c17 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
+  INCLUDES = -IC:/Dev/Gingey/game/include -IC:/Dev/Gingey/engine/include
+  OBJECT_DIR = CMakeFiles\game.dir
+  OBJECT_FILE_DIR = CMakeFiles\game.dir\game\src\core
   TARGET_COMPILE_PDB = CMakeFiles\game.dir\
   TARGET_PDB = C:\Dev\Gingey\bin\game\game.pdb
 
@@ -204,7 +224,7 @@ build CMakeFiles/game.dir/game/src/main.c.obj: C_COMPILER__game_unscanned_Debug 
 #############################################
 # Link the executable C:\Dev\Gingey\bin\game\game.exe
 
-build C$:/Dev/Gingey/bin/game/game.exe: C_EXECUTABLE_LINKER__game_Debug CMakeFiles/game.dir/game/src/main.c.obj | C$:/Dev/Gingey/bin/engine/ginger.lib
+build C$:/Dev/Gingey/bin/game/game.exe: C_EXECUTABLE_LINKER__game_Debug CMakeFiles/game.dir/game/src/core/main.c.obj CMakeFiles/game.dir/game/src/core/init.c.obj CMakeFiles/game.dir/game/src/core/windowProcs.c.obj | C$:/Dev/Gingey/bin/engine/ginger.lib
   CONFIG = Debug
   FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
   LINK_FLAGS = -Xlinker /subsystem:windows -fuse-ld=lld-link

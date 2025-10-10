@@ -64,7 +64,16 @@ if (BUILD_GAME)
 
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/game)
 
-    add_executable(game WIN32 game/src/main.c)
+    add_executable(game WIN32 game/src/core/main.c)
+
+    set(CORE_SOURCES
+        game/src/core/init.c
+        game/src/core/windowProcs.c
+    )
+
+    target_sources(game PRIVATE
+        ${CORE_SOURCES}
+    )
 
     set(CMAKE_C_STANDARD 17)
     set(CMAKE_C_STANDARD_REQUIRED ON)
