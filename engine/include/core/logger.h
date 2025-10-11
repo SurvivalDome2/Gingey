@@ -15,6 +15,8 @@
 #define MAX_LOG_QUEUE 128
 #define MESSAGE_CHAR_COUNT 512
 
+extern SYSTEMTIME systemTime;
+
 typedef enum
 {
     LOG_LEVEL_TRACE,

@@ -5,6 +5,7 @@
         "logger.h": "c",
         "windows.h": "c",
         "window.h": "c",
-        "main.h": "c"
+        "main.h": "c",
+        "vulkan_utils.h": "c"
     }
 }

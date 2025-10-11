@@ -11,18 +11,28 @@ int WINAPI WinMain(
     (void)lpCmdLine;
     (void)nCmdShow;
 
-    HWND hWnd = init(hInstance, "windowName");
+    Window window = tg_init(hInstance, "gameName");
+    VkInstance vkInstance = {0};
 
-    EnableWindow(hWnd, true);
+    {
+        VkResult result = initVulkan("gameName", &vkInstance);
+        if(result != VK_SUCCESS)
+        {
+            tg_shutdown(vkInstance);
+            PostQuitMessage(result);
+        }
+    }
+
+    EnableWindow(window.hWnd, TRUE);
 
     MSG msg = {0};
-    while (GetMessage(&msg, hWnd, 0, 0) > 0)
+    while (GetMessage(&msg, window.hWnd, 0, 0) > 0)
     {
         TranslateMessage(&msg);
-        DispatchMessageW(&msg);
+        DispatchMessage(&msg);
     }
  
-    loggerShutdown();
+    tg_shutdown(vkInstance);
 
     return 0;
 }

@@ -17,6 +17,12 @@ enum ClassStylePresets {
     BASE = CS_OWNDC
 };
 
+typedef struct {
+    HINSTANCE hInstance;
+    HWND hWnd;
+    const char* name;
+} Window;
+
 void registerClass(HINSTANCE hInstance, LPCSTR className, ul style, WNDPROC windowProc);
 
 HWND createWindow(

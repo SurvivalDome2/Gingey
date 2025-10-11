@@ -3,10 +3,10 @@
 #include <core/logger.h>
 #include <core/window.h>
 
-#include <core/init.h>
-#include <core/windowProcs.h>
+#include <graphics/vulkan_utils.h>
 
-SYSTEMTIME systemTime;
+#include <core/utils.h>
+#include <core/windowProcs.h>
 
 int WINAPI WinMain(
     HINSTANCE hInstance,

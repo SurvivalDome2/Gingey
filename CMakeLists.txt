@@ -8,7 +8,7 @@ if (BUILD_ENGINE)
 
     set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/engine)
 
-    set(CMAKE_C_STANDARD 17)
+    set(CMAKE_C_STANDARD 23)
     set(CMAKE_C_STANDARD_REQUIRED ON)
     set(CMAKE_C_EXTENSIONS OFF)
 
@@ -60,14 +60,14 @@ endif()
 if (BUILD_GAME)
     project(game LANGUAGES C)
 
-    set(MY_LIB_PATH "${CMAKE_SOURCE_DIR}/bin/engine/ginger.lib")
+    set(GINGER_LIB_PATH "${CMAKE_SOURCE_DIR}/bin/engine/ginger.lib")
 
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/game)
 
     add_executable(game WIN32 game/src/core/main.c)
 
     set(CORE_SOURCES
-        game/src/core/init.c
+        game/src/core/utils.c
         game/src/core/windowProcs.c
     )
 
@@ -75,7 +75,7 @@ if (BUILD_GAME)
         ${CORE_SOURCES}
     )
 
-    set(CMAKE_C_STANDARD 17)
+    set(CMAKE_C_STANDARD 23)
     set(CMAKE_C_STANDARD_REQUIRED ON)
     set(CMAKE_C_EXTENSIONS OFF)
 
@@ -85,5 +85,5 @@ if (BUILD_GAME)
 
     target_include_directories(game PRIVATE game/include engine/include)
 
-    target_link_libraries(game PRIVATE ${MY_LIB_PATH})
+    target_link_libraries(game PRIVATE ${GINGER_LIB_PATH} Vulkan::Vulkan)
 endif()

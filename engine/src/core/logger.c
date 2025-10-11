@@ -1,5 +1,7 @@
 #include <core/logger.h>
 
+SYSTEMTIME systemTime;
+
 static LogQueue logQueue;
 
 uintptr_t hThread;
@@ -8,7 +10,7 @@ bool loggerInit(void)
 {
     threadInit(loggingThreadProcessor, &logQueue.semaphore, MAX_LOG_QUEUE, &logQueue.criticalSection, &hThread);
 
-    atomic_store(&logQueue.running, true);
+    atomic_store(&logQueue.running, TRUE);
     logQueue.oldestMessageIndex = 0;
     logQueue.newestMessageIndex = 0;
     logQueue.totalQueuedMessages = 0;
@@ -41,7 +43,7 @@ unsigned int __stdcall loggingThreadProcessor(void* arg)
         printf("%s\n", formattedMessage);
 
         EnterCriticalSection(&logQueue.criticalSection);
-        atomic_store(&logQueue.running, false);
+        atomic_store(&logQueue.running, FALSE);
         LeaveCriticalSection(&logQueue.criticalSection);
 
         threadShutdown(&hThread, &logQueue.semaphore, &logQueue.criticalSection);
@@ -161,7 +163,7 @@ void logEnqueue(LogLevel logLevel, const char* message, SYSTEMTIME time, int lin
 void loggerShutdown(void)
 {
     EnterCriticalSection(&logQueue.criticalSection);
-    atomic_store(&logQueue.running, false);
+    atomic_store(&logQueue.running, FALSE);
     LeaveCriticalSection(&logQueue.criticalSection);
 
     int remaining;
