@@ -1,21 +1,26 @@
 #include <core/logger.h>
 
-SYSTEMTIME systemTime;
-
 static LogQueue logQueue;
+
+SYSTEMTIME systemTime;
 
 uintptr_t hThread;
 
-bool loggerInit(void)
+ErrorCode loggerInit(void)
 {
-    threadInit(loggingThreadProcessor, &logQueue.semaphore, MAX_LOG_QUEUE, &logQueue.criticalSection, &hThread);
+    ErrorCode errorCode = threadInit(loggingThreadProcessor, &logQueue.semaphore, MAX_LOG_QUEUE, &logQueue.criticalSection, &hThread);
+
+    if(errorCode.mainError != 0)
+    {
+        return errorCode;
+    }
 
     atomic_store(&logQueue.running, TRUE);
     logQueue.oldestMessageIndex = 0;
     logQueue.newestMessageIndex = 0;
     logQueue.totalQueuedMessages = 0;
 
-    return TRUE;
+    return errorCode;
 }
 
 unsigned int __stdcall loggingThreadProcessor(void* arg)

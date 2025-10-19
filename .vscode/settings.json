@@ -6,6 +6,12 @@
         "windows.h": "c",
         "window.h": "c",
         "main.h": "c",
-        "vulkan_utils.h": "c"
+        "vulkan_utils.h": "c",
+        "utils.h": "c",
+        "multi_thread.h": "c",
+        "window_procs.h": "c",
+        "system_error": "c",
+        "tg_utils.h": "c",
+        "gr_utils.h": "c"
     }
 }

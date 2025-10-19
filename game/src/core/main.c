@@ -7,20 +7,20 @@ int WINAPI WinMain(
     int       nCmdShow
 )
 {
+    ErrorCode errorCode = {0};
+
     (void)hPrevInstance;
     (void)lpCmdLine;
     (void)nCmdShow;
 
-    Window window = tg_init(hInstance, "gameName");
-    VkInstance vkInstance = {0};
-
+    Window window = {0};
+    
+    errorCode = gr_init(hInstance, "gameName", &window, WindowProc);
+    if(errorCode.mainError != 0)
     {
-        VkResult result = initVulkan("gameName", &vkInstance);
-        if(result != VK_SUCCESS)
-        {
-            tg_shutdown(vkInstance);
-            PostQuitMessage(result);
-        }
+        MessageBeep(MB_ICONHAND);
+        MessageBoxEx(window.hWnd, outputError(errorCode), "Error", MB_OK, 0);
+        ExitProcess(errorCode.mainError);
     }
 
     EnableWindow(window.hWnd, TRUE);
@@ -31,8 +31,6 @@ int WINAPI WinMain(
         TranslateMessage(&msg);
         DispatchMessage(&msg);
     }
- 
-    tg_shutdown(vkInstance);
 
     return 0;
 }

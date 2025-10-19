@@ -1,34 +1,57 @@
 #include <core/multi_thread.h>
 
-bool threadInit(_beginthreadex_proc_type startAddress, HANDLE* semaphore, int maxSemaphoreCalls, CRITICAL_SECTION* criticalSection, uintptr_t* hThread)
+ErrorCode threadInit(_beginthreadex_proc_type startAddress, HANDLE* semaphore, int maxSemaphoreCalls, CRITICAL_SECTION* criticalSection, uintptr_t* hThread)
 {
-    if(startAddress == 0 || criticalSection == NULL || hThread == NULL)
+    ErrorCode errorCode = {0};
+
+    if(startAddress == 0)
     {
-        return FALSE;
+        errorCode.mainError = 25601;
+        errorCode.errorDetail = 1;
+
+        return errorCode;
     }
-    else
+    if(criticalSection == NULL)
     {
-        if (semaphore != NULL && maxSemaphoreCalls != 0)
-        {
-            *semaphore = CreateSemaphore(NULL, 0, maxSemaphoreCalls, NULL);
-            ReleaseSemaphore(*semaphore, 1, NULL);
-        }
+        errorCode.mainError = 25601;
+        errorCode.errorDetail = 2;
 
-        InitializeCriticalSection(criticalSection);
-        if(criticalSection == NULL)
-        {
-            return FALSE;
-        }
-
-        *hThread = _beginthreadex(NULL, 0, startAddress, NULL, 0, NULL);
-
-        if(*hThread == 0)
-        {
-            return FALSE;
-        }
-
-        return TRUE;
+        return errorCode;
     }
+    if(hThread == NULL)
+    {
+        errorCode.mainError = 25601;
+        errorCode.errorDetail = 3;
+
+        return errorCode;
+    }
+    
+    if (semaphore != NULL && maxSemaphoreCalls != 0)
+    {
+        *semaphore = CreateSemaphore(NULL, 0, maxSemaphoreCalls, NULL);
+        ReleaseSemaphore(*semaphore, 1, NULL);
+    }
+
+    InitializeCriticalSection(criticalSection);
+    if(criticalSection == NULL)
+    {
+        errorCode.mainError = 25602;
+        errorCode.errorDetail = 1;
+
+        return errorCode;
+    }
+
+    *hThread = _beginthreadex(NULL, 0, startAddress, NULL, 0, NULL);
+
+    if(*hThread == 0)
+    {
+        errorCode.mainError = 25603;
+        errorCode.errorDetail = 1;
+
+        return errorCode;
+    }
+
+    return errorCode;
 }
 
 void threadShutdown(uintptr_t* hThread, HANDLE* semaphore, CRITICAL_SECTION* criticalSection)

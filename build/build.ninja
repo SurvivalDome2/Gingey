@@ -52,7 +52,7 @@ build cmake_object_order_depends_target_ginger: phony || .
 build CMakeFiles/ginger.dir/engine/src/core/engine.c.obj: C_COMPILER__ginger_unscanned_Debug C$:/Dev/Gingey/engine/src/core/engine.c || cmake_object_order_depends_target_ginger
   CONFIG = Debug
   DEP_FILE = CMakeFiles\ginger.dir\engine\src\core\engine.c.obj.d
-  FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations
+  FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations -Wno-incompatible-pointer-types-discards-qualifiers
   INCLUDES = -IC:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
   OBJECT_DIR = CMakeFiles\ginger.dir
   OBJECT_FILE_DIR = CMakeFiles\ginger.dir\engine\src\core
@@ -62,7 +62,7 @@ build CMakeFiles/ginger.dir/engine/src/core/engine.c.obj: C_COMPILER__ginger_uns
 build CMakeFiles/ginger.dir/engine/src/core/memory.c.obj: C_COMPILER__ginger_unscanned_Debug C$:/Dev/Gingey/engine/src/core/memory.c || cmake_object_order_depends_target_ginger
   CONFIG = Debug
   DEP_FILE = CMakeFiles\ginger.dir\engine\src\core\memory.c.obj.d
-  FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations
+  FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations -Wno-incompatible-pointer-types-discards-qualifiers
   INCLUDES = -IC:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
   OBJECT_DIR = CMakeFiles\ginger.dir
   OBJECT_FILE_DIR = CMakeFiles\ginger.dir\engine\src\core
@@ -72,7 +72,7 @@ build CMakeFiles/ginger.dir/engine/src/core/memory.c.obj: C_COMPILER__ginger_uns
 build CMakeFiles/ginger.dir/engine/src/core/logger.c.obj: C_COMPILER__ginger_unscanned_Debug C$:/Dev/Gingey/engine/src/core/logger.c || cmake_object_order_depends_target_ginger
   CONFIG = Debug
   DEP_FILE = CMakeFiles\ginger.dir\engine\src\core\logger.c.obj.d
-  FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations
+  FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations -Wno-incompatible-pointer-types-discards-qualifiers
   INCLUDES = -IC:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
   OBJECT_DIR = CMakeFiles\ginger.dir
   OBJECT_FILE_DIR = CMakeFiles\ginger.dir\engine\src\core
@@ -82,17 +82,17 @@ build CMakeFiles/ginger.dir/engine/src/core/logger.c.obj: C_COMPILER__ginger_uns
 build CMakeFiles/ginger.dir/engine/src/core/event_system.c.obj: C_COMPILER__ginger_unscanned_Debug C$:/Dev/Gingey/engine/src/core/event_system.c || cmake_object_order_depends_target_ginger
   CONFIG = Debug
   DEP_FILE = CMakeFiles\ginger.dir\engine\src\core\event_system.c.obj.d
-  FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations
+  FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations -Wno-incompatible-pointer-types-discards-qualifiers
   INCLUDES = -IC:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
   OBJECT_DIR = CMakeFiles\ginger.dir
   OBJECT_FILE_DIR = CMakeFiles\ginger.dir\engine\src\core
   TARGET_COMPILE_PDB = CMakeFiles\ginger.dir\ginger.pdb
   TARGET_PDB = C:\Dev\Gingey\bin\engine\ginger.pdb
 
-build CMakeFiles/ginger.dir/engine/src/core/ini.c.obj: C_COMPILER__ginger_unscanned_Debug C$:/Dev/Gingey/engine/src/core/ini.c || cmake_object_order_depends_target_ginger
+build CMakeFiles/ginger.dir/engine/src/core/gr_utils.c.obj: C_COMPILER__ginger_unscanned_Debug C$:/Dev/Gingey/engine/src/core/gr_utils.c || cmake_object_order_depends_target_ginger
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\ginger.dir\engine\src\core\ini.c.obj.d
-  FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations
+  DEP_FILE = CMakeFiles\ginger.dir\engine\src\core\gr_utils.c.obj.d
+  FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations -Wno-incompatible-pointer-types-discards-qualifiers
   INCLUDES = -IC:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
   OBJECT_DIR = CMakeFiles\ginger.dir
   OBJECT_FILE_DIR = CMakeFiles\ginger.dir\engine\src\core
@@ -102,7 +102,7 @@ build CMakeFiles/ginger.dir/engine/src/core/ini.c.obj: C_COMPILER__ginger_unscan
 build CMakeFiles/ginger.dir/engine/src/core/multi_thread.c.obj: C_COMPILER__ginger_unscanned_Debug C$:/Dev/Gingey/engine/src/core/multi_thread.c || cmake_object_order_depends_target_ginger
   CONFIG = Debug
   DEP_FILE = CMakeFiles\ginger.dir\engine\src\core\multi_thread.c.obj.d
-  FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations
+  FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations -Wno-incompatible-pointer-types-discards-qualifiers
   INCLUDES = -IC:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
   OBJECT_DIR = CMakeFiles\ginger.dir
   OBJECT_FILE_DIR = CMakeFiles\ginger.dir\engine\src\core
@@ -112,7 +112,7 @@ build CMakeFiles/ginger.dir/engine/src/core/multi_thread.c.obj: C_COMPILER__ging
 build CMakeFiles/ginger.dir/engine/src/core/window.c.obj: C_COMPILER__ginger_unscanned_Debug C$:/Dev/Gingey/engine/src/core/window.c || cmake_object_order_depends_target_ginger
   CONFIG = Debug
   DEP_FILE = CMakeFiles\ginger.dir\engine\src\core\window.c.obj.d
-  FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations
+  FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations -Wno-incompatible-pointer-types-discards-qualifiers
   INCLUDES = -IC:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
   OBJECT_DIR = CMakeFiles\ginger.dir
   OBJECT_FILE_DIR = CMakeFiles\ginger.dir\engine\src\core
@@ -122,7 +122,7 @@ build CMakeFiles/ginger.dir/engine/src/core/window.c.obj: C_COMPILER__ginger_uns
 build CMakeFiles/ginger.dir/engine/src/graphics/vulkan_renderer.c.obj: C_COMPILER__ginger_unscanned_Debug C$:/Dev/Gingey/engine/src/graphics/vulkan_renderer.c || cmake_object_order_depends_target_ginger
   CONFIG = Debug
   DEP_FILE = CMakeFiles\ginger.dir\engine\src\graphics\vulkan_renderer.c.obj.d
-  FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations
+  FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations -Wno-incompatible-pointer-types-discards-qualifiers
   INCLUDES = -IC:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
   OBJECT_DIR = CMakeFiles\ginger.dir
   OBJECT_FILE_DIR = CMakeFiles\ginger.dir\engine\src\graphics
@@ -132,7 +132,7 @@ build CMakeFiles/ginger.dir/engine/src/graphics/vulkan_renderer.c.obj: C_COMPILE
 build CMakeFiles/ginger.dir/engine/src/graphics/vulkan_utils.c.obj: C_COMPILER__ginger_unscanned_Debug C$:/Dev/Gingey/engine/src/graphics/vulkan_utils.c || cmake_object_order_depends_target_ginger
   CONFIG = Debug
   DEP_FILE = CMakeFiles\ginger.dir\engine\src\graphics\vulkan_utils.c.obj.d
-  FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations
+  FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations -Wno-incompatible-pointer-types-discards-qualifiers
   INCLUDES = -IC:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
   OBJECT_DIR = CMakeFiles\ginger.dir
   OBJECT_FILE_DIR = CMakeFiles\ginger.dir\engine\src\graphics
@@ -142,7 +142,7 @@ build CMakeFiles/ginger.dir/engine/src/graphics/vulkan_utils.c.obj: C_COMPILER__
 build CMakeFiles/ginger.dir/engine/src/graphics/shader.c.obj: C_COMPILER__ginger_unscanned_Debug C$:/Dev/Gingey/engine/src/graphics/shader.c || cmake_object_order_depends_target_ginger
   CONFIG = Debug
   DEP_FILE = CMakeFiles\ginger.dir\engine\src\graphics\shader.c.obj.d
-  FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations
+  FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations -Wno-incompatible-pointer-types-discards-qualifiers
   INCLUDES = -IC:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
   OBJECT_DIR = CMakeFiles\ginger.dir
   OBJECT_FILE_DIR = CMakeFiles\ginger.dir\engine\src\graphics
@@ -152,7 +152,7 @@ build CMakeFiles/ginger.dir/engine/src/graphics/shader.c.obj: C_COMPILER__ginger
 build CMakeFiles/ginger.dir/engine/src/graphics/texture.c.obj: C_COMPILER__ginger_unscanned_Debug C$:/Dev/Gingey/engine/src/graphics/texture.c || cmake_object_order_depends_target_ginger
   CONFIG = Debug
   DEP_FILE = CMakeFiles\ginger.dir\engine\src\graphics\texture.c.obj.d
-  FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations
+  FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview -Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations -Wno-incompatible-pointer-types-discards-qualifiers
   INCLUDES = -IC:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
   OBJECT_DIR = CMakeFiles\ginger.dir
   OBJECT_FILE_DIR = CMakeFiles\ginger.dir\engine\src\graphics
@@ -167,7 +167,7 @@ build CMakeFiles/ginger.dir/engine/src/graphics/texture.c.obj: C_COMPILER__ginge
 #############################################
 # Link the static library C:\Dev\Gingey\bin\engine\ginger.lib
 
-build C$:/Dev/Gingey/bin/engine/ginger.lib: C_STATIC_LIBRARY_LINKER__ginger_Debug CMakeFiles/ginger.dir/engine/src/core/engine.c.obj CMakeFiles/ginger.dir/engine/src/core/memory.c.obj CMakeFiles/ginger.dir/engine/src/core/logger.c.obj CMakeFiles/ginger.dir/engine/src/core/event_system.c.obj CMakeFiles/ginger.dir/engine/src/core/ini.c.obj CMakeFiles/ginger.dir/engine/src/core/multi_thread.c.obj CMakeFiles/ginger.dir/engine/src/core/window.c.obj CMakeFiles/ginger.dir/engine/src/graphics/vulkan_renderer.c.obj CMakeFiles/ginger.dir/engine/src/graphics/vulkan_utils.c.obj CMakeFiles/ginger.dir/engine/src/graphics/shader.c.obj CMakeFiles/ginger.dir/engine/src/graphics/texture.c.obj
+build C$:/Dev/Gingey/bin/engine/ginger.lib: C_STATIC_LIBRARY_LINKER__ginger_Debug CMakeFiles/ginger.dir/engine/src/core/engine.c.obj CMakeFiles/ginger.dir/engine/src/core/memory.c.obj CMakeFiles/ginger.dir/engine/src/core/logger.c.obj CMakeFiles/ginger.dir/engine/src/core/event_system.c.obj CMakeFiles/ginger.dir/engine/src/core/gr_utils.c.obj CMakeFiles/ginger.dir/engine/src/core/multi_thread.c.obj CMakeFiles/ginger.dir/engine/src/core/window.c.obj CMakeFiles/ginger.dir/engine/src/graphics/vulkan_renderer.c.obj CMakeFiles/ginger.dir/engine/src/graphics/vulkan_utils.c.obj CMakeFiles/ginger.dir/engine/src/graphics/shader.c.obj CMakeFiles/ginger.dir/engine/src/graphics/texture.c.obj
   CONFIG = Debug
   LANGUAGE_COMPILE_FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
   OBJECT_DIR = CMakeFiles\ginger.dir
@@ -196,19 +196,9 @@ build CMakeFiles/game.dir/game/src/core/main.c.obj: C_COMPILER__game_unscanned_D
   TARGET_COMPILE_PDB = CMakeFiles\game.dir\
   TARGET_PDB = C:\Dev\Gingey\bin\game\game.pdb
 
-build CMakeFiles/game.dir/game/src/core/utils.c.obj: C_COMPILER__game_unscanned_Debug C$:/Dev/Gingey/game/src/core/utils.c || cmake_object_order_depends_target_game
+build CMakeFiles/game.dir/game/src/core/window_procs.c.obj: C_COMPILER__game_unscanned_Debug C$:/Dev/Gingey/game/src/core/window_procs.c || cmake_object_order_depends_target_game
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\game.dir\game\src\core\utils.c.obj.d
-  FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
-  INCLUDES = -IC:/Dev/Gingey/game/include -IC:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
-  OBJECT_DIR = CMakeFiles\game.dir
-  OBJECT_FILE_DIR = CMakeFiles\game.dir\game\src\core
-  TARGET_COMPILE_PDB = CMakeFiles\game.dir\
-  TARGET_PDB = C:\Dev\Gingey\bin\game\game.pdb
-
-build CMakeFiles/game.dir/game/src/core/windowProcs.c.obj: C_COMPILER__game_unscanned_Debug C$:/Dev/Gingey/game/src/core/windowProcs.c || cmake_object_order_depends_target_game
-  CONFIG = Debug
-  DEP_FILE = CMakeFiles\game.dir\game\src\core\windowProcs.c.obj.d
+  DEP_FILE = CMakeFiles\game.dir\game\src\core\window_procs.c.obj.d
   FLAGS = -O0 -std=c23 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
   INCLUDES = -IC:/Dev/Gingey/game/include -IC:/Dev/Gingey/engine/include -isystem C:/VulkanSDK/1.4.321.1/include
   OBJECT_DIR = CMakeFiles\game.dir
@@ -224,7 +214,7 @@ build CMakeFiles/game.dir/game/src/core/windowProcs.c.obj: C_COMPILER__game_unsc
 #############################################
 # Link the executable C:\Dev\Gingey\bin\game\game.exe
 
-build C$:/Dev/Gingey/bin/game/game.exe: C_EXECUTABLE_LINKER__game_Debug CMakeFiles/game.dir/game/src/core/main.c.obj CMakeFiles/game.dir/game/src/core/utils.c.obj CMakeFiles/game.dir/game/src/core/windowProcs.c.obj | C$:/Dev/Gingey/bin/engine/ginger.lib C$:/VulkanSDK/1.4.321.1/Lib/vulkan-1.lib
+build C$:/Dev/Gingey/bin/game/game.exe: C_EXECUTABLE_LINKER__game_Debug CMakeFiles/game.dir/game/src/core/main.c.obj CMakeFiles/game.dir/game/src/core/window_procs.c.obj | C$:/Dev/Gingey/bin/engine/ginger.lib C$:/VulkanSDK/1.4.321.1/Lib/vulkan-1.lib
   CONFIG = Debug
   FLAGS = -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -g -Xclang -gcodeview
   LINK_FLAGS = -Xlinker /subsystem:windows -fuse-ld=lld-link

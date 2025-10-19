@@ -23,7 +23,7 @@ if (BUILD_ENGINE)
         engine/src/core/memory.c
         engine/src/core/logger.c
         engine/src/core/event_system.c
-        engine/src/core/ini.c
+        engine/src/core/gr_utils.c
         engine/src/core/multi_thread.c
         engine/src/core/window.c
     )
@@ -53,7 +53,7 @@ if (BUILD_ENGINE)
 
     target_compile_options(ginger PRIVATE
       $<$<C_COMPILER_ID:MSVC>:/W4 /WX>
-      $<$<C_COMPILER_ID:GNU,Clang,AppleClang>:-Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations>
+      $<$<C_COMPILER_ID:GNU,Clang,AppleClang>:-Wall -Wextra -Wpedantic -Werror -Wno-empty-translation-unit -Wno-newline-eof -Wno-deprecated-declarations -Wno-incompatible-pointer-types-discards-qualifiers>
     )
 endif()
 
@@ -67,8 +67,7 @@ if (BUILD_GAME)
     add_executable(game WIN32 game/src/core/main.c)
 
     set(CORE_SOURCES
-        game/src/core/utils.c
-        game/src/core/windowProcs.c
+        game/src/core/window_procs.c
     )
 
     target_sources(game PRIVATE

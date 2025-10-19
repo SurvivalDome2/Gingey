@@ -1,6 +1,5 @@
 #pragma once
 
-#include <windows.h>
 #include <time.h>
 #include <stdbool.h>
 #include <string.h>
@@ -8,7 +7,9 @@
 #include <process.h>
 #include <stdatomic.h>
 
-#include "../../engine/include/defines.h"
+#include <windows.h>
+
+#include <defines.h>
 
 #include <core/multi_thread.h>
 
@@ -32,7 +33,7 @@ typedef struct
     char message[MESSAGE_CHAR_COUNT];
     SYSTEMTIME timeOfMessage;
     int line;
-    char file[255]; // Maybe make this dynamic? But seems unnecessary for now
+    char file[255];
 } LogEntry;
 
 typedef struct
@@ -46,10 +47,10 @@ typedef struct
     volatile atomic_bool running;
 } LogQueue;
 
-bool loggerInit(void);
+ErrorCode loggerInit(void);
 
-unsigned int __stdcall loggingThreadProcessor(void* arg); // Requires void* arg, because Windows sucks
+unsigned int __stdcall loggingThreadProcessor(void* arg); // Requires void* arg
 
-void logEnqueue(LogLevel logLevel, const char* message, SYSTEMTIME time, int line, const char* file); // Adds log messages to queue
+void logEnqueue(LogLevel logLevel, const char* message, SYSTEMTIME time, int line, const char* file);
 
 void loggerShutdown(void);

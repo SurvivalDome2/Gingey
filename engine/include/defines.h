@@ -16,6 +16,12 @@ typedef struct
     int z;
 } MathVector;
 
+typedef struct
+{
+    uint mainError;
+    uchar errorDetail;
+} ErrorCode;
+
 #if defined(__clang__) || defined(__gcc__)
 #define STATIC_ASSERT _Static_assert
 #else

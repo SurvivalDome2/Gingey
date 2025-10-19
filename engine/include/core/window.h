@@ -1,8 +1,8 @@
 #pragma once
 
-#include <windows.h>
-
 #include <defines.h>
+
+#include <windows.h>
 
 enum WindowStylePresets {
     WEMPTY = 0,
