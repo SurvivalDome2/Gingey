@@ -10,4 +10,4 @@ void createInfoInstance(const char* name, VkInstanceCreateInfo* createInfo);
 
 void createInstance(void);
 
-VkResult initVulkan(const char* gameName, VkInstance* instance);
+ErrorCode initVulkan(const char* gameName, VkInstance* instance);

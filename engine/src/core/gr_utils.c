@@ -28,14 +28,7 @@ ErrorCode gr_init(HINSTANCE hInstance, LPCSTR gameName, Window* window, WNDPROC 
 
     VkInstance vkInstance = {0};
 
-    {
-        VkResult result = initVulkan("gameName", &vkInstance);
-        if(result != VK_SUCCESS)
-        {
-            gr_shutdown(vkInstance);
-            ExitProcess(errorCode.mainError);
-        }
-    }
+    errorCode = initVulkan("gameName", &vkInstance);
 
     return errorCode;
 }
