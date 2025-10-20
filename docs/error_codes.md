@@ -10,13 +10,20 @@ and also the more detailed code. The more detailed code for GR will start at 1, 
 main error starts at 25600 as stated above. For TG, the detailed code will also start
 at 1, and the main error starts at 35150.
 
+When the error detail is a negative number, it means the following:
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;-1 - `mainError` is a Vulkan error code
+
 25601 - Failed to initialize the logging thread due to invalid params
   <br>&nbsp;&nbsp;&nbsp;&nbsp;1 - `startAddress` param is 0 (invalid)
   <br>&nbsp;&nbsp;&nbsp;&nbsp;2 - `criticalSection` param is a NULL ptr (invalid)
   <br>&nbsp;&nbsp;&nbsp;&nbsp;3 - `hThread` param is a NULL ptr (invalid)
 
 25602 - Failed to initialize critical section
-  <br>&nbsp;&nbsp;&nbsp;&nbsp;1 - `InitializeCriticalSection()` set `criticalSection` to a NULL ptr
 
 25603 - Failed to create thread
-  <br>&nbsp;&nbsp;&nbsp;&nbsp;1 - `_beginthreadex()` returned 0
+
+25604 - Failed to create Vulkan infoInstance due to invalid params
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;1 - `name` param is a NULL ptr (invalid)
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;2 - `createInfo` param is a NULL ptr (invalid)
+
+25605 - Failed to allocate memory in `createInfoInstance`

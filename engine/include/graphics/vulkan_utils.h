@@ -2,12 +2,13 @@
 
 #include <stdlib.h>
 
-#include <core/logger.h>
-
 #include <vulkan/vulkan.h>
 
-void createInfoInstance(const char* name, VkInstanceCreateInfo* createInfo);
+#include <core/logger.h>
+#include <core/gr_utils.h>
+
+ErrorCode createInfoInstance(const char* name, VkInstanceCreateInfo* createInfo);
 
 void createInstance(void);
 
-VkResult initVulkan(const char* gameName, VkInstance* instance);
+ErrorCode initVulkan(const char* gameName, VkInstance* instance);

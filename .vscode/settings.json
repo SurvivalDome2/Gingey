@@ -12,6 +12,8 @@
         "window_procs.h": "c",
         "system_error": "c",
         "tg_utils.h": "c",
-        "gr_utils.h": "c"
+        "gr_utils.h": "c",
+        "vulkan.h": "c",
+        "vulkan_enums.hpp": "c"
     }
 }

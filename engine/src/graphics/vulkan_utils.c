@@ -1,10 +1,25 @@
 #include <graphics/vulkan_utils.h>
 
-void createInfoInstance(const char* name, VkInstanceCreateInfo* createInfo)
+ErrorCode createInfoInstance(const char* name, VkInstanceCreateInfo* createInfo)
 {
-    if (!name || !createInfo) {
-        logEnqueue(LOG_LEVEL_ERROR, "Invalid parameters", systemTime, __LINE__, __FILE__);
-        return;
+    ErrorCode errorCode = {0};
+
+    if(name == NULL || createInfo == NULL)
+    {
+        errorCode.mainError = 25604;
+        
+        if(name == NULL)
+        {
+            errorCode.errorDetail = 1;
+        }
+        else
+        {
+            errorCode.errorDetail = 2;
+        }
+
+        logEnqueue(LOG_LEVEL_ERROR, "Invalid paramaters passed to createInfoInstance", systemTime, __LINE__, __FILE__);
+        
+        return errorCode;
     }
 
     VkApplicationInfo appInfo = {};
@@ -23,7 +38,11 @@ void createInfoInstance(const char* name, VkInstanceCreateInfo* createInfo)
     const char** extensions = malloc(sizeof(char*));
     if(extensions == NULL)
     {
-        logEnqueue(LOG_LEVEL_FATAL, "Malloc failed when creating Vulkan extensions list", systemTime, __LINE__, __FILE__);
+        errorCode.mainError = 25605;
+
+        logEnqueue(LOG_LEVEL_FATAL, "Failed to allocate memory for the Vulkan extensions list", systemTime, __LINE__, __FILE__);
+
+        return errorCode;
     }
     extensions[0] = (char*)VK_KHR_SURFACE_EXTENSION_NAME;
 
@@ -32,47 +51,30 @@ void createInfoInstance(const char* name, VkInstanceCreateInfo* createInfo)
 
     createInfo->enabledLayerCount = 0;
 
-    return;
+    return errorCode;
 }
 
-void createInstance(void)
+void pickPhysicalDevice(void)
 {
     
 }
 
-VkResult initVulkan(const char* gameName, VkInstance* instance)
+ErrorCode initVulkan(const char* gameName, VkInstance* instance)
 {
+    ErrorCode errorCode = {0};
+
     VkInstanceCreateInfo createInfo = {0};
     createInfoInstance(gameName, &createInfo);
+    
+    if(errorCode.mainError != 0)
+    {
+        return errorCode;
+    }
 
     VkResult result = vkCreateInstance(&createInfo, NULL, instance);
 
-    switch(result)
-    {
-        case VK_SUCCESS:
-            break;
-        case VK_ERROR_EXTENSION_NOT_PRESENT:
-            logEnqueue(LOG_LEVEL_FATAL, "Could not find one or more Vulkan extensions.", systemTime, __LINE__, __FILE__);
-            break;
-        case VK_ERROR_INCOMPATIBLE_DRIVER:
-            logEnqueue(LOG_LEVEL_FATAL, "The current driver is incompatible with this engine.", systemTime, __LINE__, __FILE__);
-            break;
-        case VK_ERROR_INITIALIZATION_FAILED:
-            logEnqueue(LOG_LEVEL_FATAL, "Vulkan instance initialization failed.", systemTime, __LINE__, __FILE__);
-            break;
-        case VK_ERROR_LAYER_NOT_PRESENT:
-            logEnqueue(LOG_LEVEL_FATAL, "Could not find any Vulkan layers.", systemTime, __LINE__, __FILE__);
-            break;
-        case VK_ERROR_OUT_OF_DEVICE_MEMORY:
-            logEnqueue(LOG_LEVEL_FATAL, "Device out of memory.", systemTime, __LINE__, __FILE__);
-            break;
-        case VK_ERROR_OUT_OF_HOST_MEMORY:
-            logEnqueue(LOG_LEVEL_FATAL, "Out of host memory.", systemTime, __LINE__, __FILE__);
-            break;
-        default:
-            logEnqueue(LOG_LEVEL_FATAL, "Unknown error.", systemTime, __LINE__, __FILE__);
-            break;
-    }
+    errorCode.mainError = result;
+    errorCode.errorDetail = -1;
 
-    return result;
+    return errorCode;
 }

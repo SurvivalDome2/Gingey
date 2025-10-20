@@ -19,7 +19,7 @@ typedef struct
 typedef struct
 {
     uint mainError;
-    uchar errorDetail;
+    char errorDetail;
 } ErrorCode;
 
 #if defined(__clang__) || defined(__gcc__)

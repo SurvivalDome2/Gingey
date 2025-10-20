@@ -1,5 +1,7 @@
 #pragma once
 
+#include <string.h>
+
 #include <core/logger.h>
 #include <core/window.h>
 #include <core/gr_utils.h>
