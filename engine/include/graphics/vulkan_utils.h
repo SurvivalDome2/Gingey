@@ -3,11 +3,12 @@
 #include <stdlib.h>
 #include <assert.h>
 
-#include <core/logger.h>
-
 #include <vulkan/vulkan.h>
 
-int createInfoInstance(const char* name, VkInstanceCreateInfo* createInfo);
+#include <core/logger.h>
+#include <core/gr_utils.h>
+
+ErrorCode createInfoInstance(const char* name, VkInstanceCreateInfo* createInfo);
 
 void createInstance(void);
 

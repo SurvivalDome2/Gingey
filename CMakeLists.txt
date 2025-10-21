@@ -12,9 +12,7 @@ if (BUILD_ENGINE)
     set(CMAKE_C_STANDARD_REQUIRED ON)
     set(CMAKE_C_EXTENSIONS OFF)
 
-    if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
     set(CMAKE_BUILD_TYPE Debug CACHE STRING "Build type" FORCE)
-    endif()
 
     find_package(Vulkan REQUIRED COMPONENTS glslc)
 
@@ -78,9 +76,7 @@ if (BUILD_GAME)
     set(CMAKE_C_STANDARD_REQUIRED ON)
     set(CMAKE_C_EXTENSIONS OFF)
 
-    if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
     set(CMAKE_BUILD_TYPE Debug CACHE STRING "Build type" FORCE)
-    endif()
 
     target_include_directories(game PRIVATE game/include engine/include)
 

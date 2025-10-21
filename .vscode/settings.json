@@ -13,6 +13,7 @@
         "system_error": "c",
         "tg_utils.h": "c",
         "gr_utils.h": "c",
-        "xlocale": "c"
+        "vulkan.h": "c",
+        "vulkan_enums.hpp": "c"
     }
 }
