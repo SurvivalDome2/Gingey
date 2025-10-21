@@ -1,12 +1,13 @@
 #pragma once
 
 #include <stdlib.h>
+#include <assert.h>
 
 #include <core/logger.h>
 
 #include <vulkan/vulkan.h>
 
-void createInfoInstance(const char* name, VkInstanceCreateInfo* createInfo);
+int createInfoInstance(const char* name, VkInstanceCreateInfo* createInfo);
 
 void createInstance(void);
 

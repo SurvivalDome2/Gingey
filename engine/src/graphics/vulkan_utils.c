@@ -1,13 +1,14 @@
 #include <graphics/vulkan_utils.h>
 
-void createInfoInstance(const char* name, VkInstanceCreateInfo* createInfo)
+int createInfoInstance(const char* name, VkInstanceCreateInfo* createInfo)
 {
-    if (!name || !createInfo) {
+    if (!name || !createInfo)
+    {
         logEnqueue(LOG_LEVEL_ERROR, "Invalid parameters", systemTime, __LINE__, __FILE__);
-        return;
+        return 0;
     }
 
-    VkApplicationInfo appInfo = {};
+    static VkApplicationInfo appInfo = {0};
 
     appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
     appInfo.pApplicationName = name;
@@ -32,7 +33,7 @@ void createInfoInstance(const char* name, VkInstanceCreateInfo* createInfo)
 
     createInfo->enabledLayerCount = 0;
 
-    return;
+    return 0;
 }
 
 void createInstance(void)
@@ -46,7 +47,7 @@ ErrorCode initVulkan(const char* gameName, VkInstance* instance)
 
     VkInstanceCreateInfo createInfo = {0};
     createInfoInstance(gameName, &createInfo);
-    
+
     if(errorCode.mainError != 0)
     {
         return errorCode;
