@@ -36,7 +36,7 @@ ErrorCode createInfoInstance(const char* name, VkInstanceCreateInfo* createInfo)
     createInfo->pApplicationInfo = &appInfo;
 
     // Cannot figure out how to free this without causing a crash
-    const char** extensions = NULL; // malloc(sizeof(char*));
+    const char** extensions = malloc(sizeof(char*));
     if(extensions == NULL)
     {
         errorCode.mainError = 25605;

@@ -25,27 +25,21 @@ ErrorCode loggerInit(void)
 
 unsigned int __stdcall loggingThreadProcessor(void* arg)
 {
-    (void)arg; // Needed to convince the compiler that arg is being used
+    (void)arg;
 
     HANDLE hLogFile = CreateFileW(L"log.txt", FILE_APPEND_DATA, FILE_SHARE_READ, NULL, OPEN_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
 
     if(hLogFile == INVALID_HANDLE_VALUE)
     {
-        int line = __LINE__ - 2;
-
         SYSTEMTIME time;
         GetLocalTime(&time);
         char formattedMessage[1024];
         snprintf(
             formattedMessage, 
             sizeof(formattedMessage),
-            "[%02d:%02d:%02d.%03d] [File: %s] [Line: %d] Failed to open log file",
-            time.wHour, time.wMinute, time.wSecond, time.wMilliseconds,
-            __FILE__,
-            line
+            "[%02d:%02d:%02d.%03d] FATAL: Failed to create log file",
+            time.wHour, time.wMinute, time.wSecond, time.wMilliseconds
         );
-
-        printf("%s\n", formattedMessage);
 
         EnterCriticalSection(&logQueue.criticalSection);
         atomic_store(&logQueue.running, FALSE);
@@ -77,23 +71,28 @@ unsigned int __stdcall loggingThreadProcessor(void* arg)
 
         if(hasEntry)
         {
-            char* logLevelString = "";
+            char* logLevelString;
 
             switch(logEntry.logLevel)
             {
                 case 0:
+                    logLevelString = malloc(sizeof("TRACE"));
                     logLevelString = "TRACE";
                     break;
                 case 1:
+                    logLevelString = malloc(sizeof("INFO"));
                     logLevelString = "INFO";
                     break;
                 case 2:
+                    logLevelString = malloc(sizeof("WARNING"));
                     logLevelString = "WARNING";
                     break;
                 case 3:
+                    logLevelString = malloc(sizeof("ERROR"));
                     logLevelString = "ERROR";
                     break;
                 case 4:
+                    logLevelString = malloc(sizeof("FATAL"));
                     logLevelString = "FATAL";
                     break;
             }
@@ -104,10 +103,8 @@ unsigned int __stdcall loggingThreadProcessor(void* arg)
             int len = snprintf(
                 formattedMessage, 
                 sizeof(formattedMessage),
-                "[%02d:%02d:%02d.%03d] [File: %s] [Line: %d] %s: %s\n",
+                "[%02d:%02d:%02d.%03d] %s: %s\n",
                 time.wHour, time.wMinute, time.wSecond, time.wMilliseconds,
-                logEntry.file,
-                logEntry.line,
                 logLevelString,
                 logEntry.message
             );
@@ -119,7 +116,6 @@ unsigned int __stdcall loggingThreadProcessor(void* arg)
                 DWORD err = GetLastError();
                 char message[256];
                 snprintf(message, sizeof(message), "WriteFile failed: %lu", err);
-                OutputDebugStringA(message);
             }
         }
     }

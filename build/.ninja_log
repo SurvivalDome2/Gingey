@@ -9,11 +9,11 @@
 11	309	7830403194907140	CMakeFiles/ginger.dir/engine/src/core/logger.c.obj	279b6990ea8c6b33
 32	379	7827873390388682	CMakeFiles/ginger.dir/engine/src/core/window.c.obj	bdf43fd8d4d309bc
 62	415	7827873390720503	CMakeFiles/game.dir/game/src/core/window_procs.c.obj	e620edd55d416ada
-11	349	7830402044658504	CMakeFiles/ginger.dir/engine/src/core/gr_utils.c.obj	e397904db6751dc5
+11	346	7830403890619989	CMakeFiles/ginger.dir/engine/src/core/gr_utils.c.obj	e397904db6751dc5
 12	326	7830403562300207	CMakeFiles/ginger.dir/engine/src/graphics/vulkan_utils.c.obj	3d2cd24ac4f9ea7d
 18	342	7830402044824735	CMakeFiles/game.dir/game/src/core/main.c.obj	a3a25280659672c8
-327	387	7830403565461552	C:/Dev/Gingey/bin/engine/ginger.lib	11ff61a4ca7cc9a0
-387	470	7830403566129549	C:/Dev/Gingey/bin/game/game.exe	2a2dbda2594beed4
-11	346	7830403890619989	CMakeFiles/ginger.dir/engine/src/core/gr_utils.c.obj	e397904db6751dc5
 347	405	7830403893959121	C:/Dev/Gingey/bin/engine/ginger.lib	11ff61a4ca7cc9a0
 405	490	7830403894482810	C:/Dev/Gingey/bin/game/game.exe	2a2dbda2594beed4
+12	317	7830410928701694	CMakeFiles/ginger.dir/engine/src/core/logger.c.obj	279b6990ea8c6b33
+317	377	7830410931832544	C:/Dev/Gingey/bin/engine/ginger.lib	11ff61a4ca7cc9a0
+377	468	7830410932396357	C:/Dev/Gingey/bin/game/game.exe	2a2dbda2594beed4

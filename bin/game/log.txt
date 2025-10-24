@@ -1,0 +1,2 @@
+[22:31:37.986] FATAL: Failed to allocate memory for the Vulkan extensions list
+[22:31:39.770] WARNING: vkInstance passed into shutdown was NULL
