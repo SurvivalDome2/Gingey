@@ -80,26 +80,36 @@ char* outputError(ErrorCode errorCode)
             baseMessage = "The current driver is incompatible with this engine";
 
             logEnqueue(LOG_LEVEL_FATAL, "The current driver is incompatible with this engine", systemTime, __LINE__, __FILE__);
+
+            return baseMessage;
         case VK_ERROR_INITIALIZATION_FAILED:
             baseMessage = malloc(sizeof("Vulkan instance initialization failed") + 1);
             baseMessage = "Vulkan instance initialization failed";
 
             logEnqueue(LOG_LEVEL_FATAL, "Vulkan instance initialization failed", systemTime, __LINE__, __FILE__);
+
+            return baseMessage;
         case VK_ERROR_LAYER_NOT_PRESENT:
             baseMessage = malloc(sizeof("Could not find any Vulkan layers") + 1);
             baseMessage = "Could not find any Vulkan layers";
 
             logEnqueue(LOG_LEVEL_FATAL, "Could not find any Vulkan layers", systemTime, __LINE__, __FILE__);
+
+            return baseMessage;
         case VK_ERROR_OUT_OF_DEVICE_MEMORY:
             baseMessage = malloc(sizeof("Device out of memory") + 1);
             baseMessage = "Device out of memory";
 
             logEnqueue(LOG_LEVEL_FATAL, "Device out of memory", systemTime, __LINE__, __FILE__);
+
+            return baseMessage;
         case VK_ERROR_OUT_OF_HOST_MEMORY:
             baseMessage = malloc(sizeof("Out of host memory") + 1);
             baseMessage = "Out of host memory";
 
             logEnqueue(LOG_LEVEL_FATAL, "Out of host memory", systemTime, __LINE__, __FILE__);
+
+            return baseMessage;
         case 25601:
             baseMessage = malloc(sizeof("Failed to initialize the logging thread due to invalid params:\n") + 1);
             baseMessage = "Failed to initialize the logging thread due to invalid params:\n";
@@ -149,8 +159,13 @@ char* outputError(ErrorCode errorCode)
                     return message;
             }
         case 25605:
-            baseMessage = malloc(sizeof("Failed to allocate memory in createInfoInstance:\n") + 1);
-            baseMessage = "Failed to allocate memory in createInfoInstance:\n";
+            baseMessage = malloc(sizeof("Failed to allocate memory in createInfoInstance") + 1);
+            baseMessage = "Failed to allocate memory in createInfoInstance";
+
+            return baseMessage;
+        case 25606:
+            baseMessage = malloc(sizeof("Found no suitable GPUs for Vulkan") + 1);
+            baseMessage = "Found no suitable GPUs for Vulkan";
 
             return baseMessage;
         default:

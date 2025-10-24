@@ -10,6 +10,6 @@
 
 ErrorCode createInfoInstance(const char* name, VkInstanceCreateInfo* createInfo);
 
-void createInstance(void);
+ErrorCode pickPhysicalDevice(VkInstance instance);
 
 ErrorCode initVulkan(const char* gameName, VkInstance* instance);

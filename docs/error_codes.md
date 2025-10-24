@@ -26,4 +26,6 @@ When the error detail is a negative number, it means the following:
   <br>&nbsp;&nbsp;&nbsp;&nbsp;1 - `name` param is a NULL ptr (invalid)
   <br>&nbsp;&nbsp;&nbsp;&nbsp;2 - `createInfo` param is a NULL ptr (invalid)
 
-25605 - Failed to allocate memory in `createInfoInstance`
+25605 - Failed to allocate memory to the extensions list in `createInfoInstance`
+
+25606 - Found no suitable GPUs for Vulkan

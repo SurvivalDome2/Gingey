@@ -41,14 +41,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "game::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-game-Debug-7e93d3540fe2187b968c.json",
+					"jsonFile" : "target-game-Debug-c1e83242d6d901522075.json",
 					"name" : "game",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "ginger::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ginger-Debug-9a0c6f32c24134b3a878.json",
+					"jsonFile" : "target-ginger-Debug-15c82e24a17b1cc79d15.json",
 					"name" : "ginger",
 					"projectIndex" : 0
 				}
